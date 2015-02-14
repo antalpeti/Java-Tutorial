@@ -1,6 +1,6 @@
-package tutorial.quickguide;
+package tutorialspoint.quickguide;
 
-import tutorial.quickguide.FreshJuice.FreshJuiceSize;
+import tutorialspoint.quickguide.FreshJuice.FreshJuiceSize;
 
 public class FreshJuiceTest {
 

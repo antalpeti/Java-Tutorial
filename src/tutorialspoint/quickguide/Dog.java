@@ -1,4 +1,4 @@
-package tutorial.quickguide;
+package tutorialspoint.quickguide;
 
 public class Dog {
   String breed;

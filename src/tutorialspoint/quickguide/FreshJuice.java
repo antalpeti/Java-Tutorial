@@ -1,4 +1,4 @@
-package tutorial.quickguide;
+package tutorialspoint.quickguide;
 
 class FreshJuice {
 
