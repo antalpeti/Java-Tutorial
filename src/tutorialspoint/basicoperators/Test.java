@@ -74,7 +74,22 @@ public class Test {
     System.out.printf("\n%-8s = %s = %3d", "d >> 6", makeZeroPaddedBinary(c, 8), c);
 
     c = a >>> 2; /* 215 = 0000 1111 */
-    System.out.printf("\n%-8s = %s = %3d", "a >>> 2", makeZeroPaddedBinary(c, 8), c);
+    System.out.printf("\n%-8s = %s = %3d\n", "a >>> 2", makeZeroPaddedBinary(c, 8), c);
+  }
+
+
+  void printLogicalOperatorsExample() {
+    boolean a = true;
+    boolean b = false;
+
+    System.out.println("a = " + a);
+    System.out.println("b = " + b);
+
+    System.out.println("a && b = " + (a && b));
+
+    System.out.println("a || b = " + (a || b));
+
+    System.out.println("!(a && b) = " + !(a && b));
   }
 
   String makeZeroPaddedBinary(int number, int bit) {
@@ -90,5 +105,7 @@ public class Test {
     t.printRelationalOperatorsExample();
     System.out.println();
     t.printBitwiseOperatorsExample();
+    System.out.println();
+    t.printLogicalOperatorsExample();;
   }
 }
