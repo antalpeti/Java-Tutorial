@@ -141,7 +141,20 @@ public class Test {
     System.out.printf("\nc ^= a   = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
 
     c |= a;
-    System.out.printf("\nc |= a   = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
+    System.out.printf("\nc |= a   = %3d = %8s\n", c, makeZeroPaddedBinary(c, 8));
+  }
+
+  void printConditionalOperatorExample() {
+    int a, b;
+    a = 10;
+    System.out.println("a = " + a);
+    b = a == 1 ? 20 : 30;
+    System.out.println("b = a == 1 ? 20 : 30");
+    System.out.println("Value of b is : " + b);
+
+    b = a == 10 ? 20 : 30;
+    System.out.println("b = a == 10 ? 20 : 30");
+    System.out.println("Value of b is : " + b);
   }
 
   String makeZeroPaddedBinary(int number, int bit) {
@@ -161,5 +174,7 @@ public class Test {
     t.printLogicalOperatorsExample();
     System.out.println();
     t.printAssignmentOperatorsExample();
+    System.out.println();
+    t.printConditionalOperatorExample();;
   }
 }
