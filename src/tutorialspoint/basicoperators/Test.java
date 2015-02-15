@@ -157,6 +157,18 @@ public class Test {
     System.out.println("Value of b is : " + b);
   }
 
+
+  void printInstanceofOperatorExample() {
+    String name = "James";
+    // following will return true since name is type of String
+    boolean result = name instanceof String;
+    System.out.println("\"" + name + "\" instanceof String : " + result);
+
+    Vehicle a = new Car();
+    result = a instanceof Car;
+    System.out.println("Vehicle instanceof Car : " + result);
+  }
+
   String makeZeroPaddedBinary(int number, int bit) {
     String padding = "00000000000000000000000000000000";
     String bin = padding + Integer.toBinaryString(number);
@@ -176,5 +188,7 @@ public class Test {
     t.printAssignmentOperatorsExample();
     System.out.println();
     t.printConditionalOperatorExample();;
+    System.out.println();
+    t.printInstanceofOperatorExample();
   }
 }
