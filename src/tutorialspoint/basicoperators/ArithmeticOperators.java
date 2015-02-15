@@ -8,7 +8,7 @@ public class ArithmeticOperators {
    * @param a
    * @param b
    */
-  void addition(int a, int b) {
+  void doAddition(int a, int b) {
     System.out.println(a + b);
   }
 
@@ -18,7 +18,7 @@ public class ArithmeticOperators {
    * @param a
    * @param b
    */
-  void subtraction(int a, int b) {
+  void doSubtraction(int a, int b) {
     System.out.println(a - b);
   }
 
@@ -28,7 +28,7 @@ public class ArithmeticOperators {
    * @param a
    * @param b
    */
-  void multiplication(int a, int b) {
+  void doMultiplication(int a, int b) {
     System.out.println(a * b);
   }
 
@@ -38,7 +38,7 @@ public class ArithmeticOperators {
    * @param a
    * @param b
    */
-  void division(int a, int b) {
+  void doDivision(int a, int b) {
     System.out.println(a / b);
   }
 
@@ -48,7 +48,7 @@ public class ArithmeticOperators {
    * @param a
    * @param b
    */
-  void modulus(int b, int a) {
+  void doModulus(int b, int a) {
     System.out.println(b % a);
   }
 
@@ -57,7 +57,7 @@ public class ArithmeticOperators {
    *
    * @param a
    */
-  void increment(int a) {
+  void doIncrement(int a) {
     a++;
     System.out.println(a);
   }
@@ -67,7 +67,7 @@ public class ArithmeticOperators {
    *
    * @param b
    */
-  void decrement(int b) {
+  void doDecrement(int b) {
     b--;
     System.out.println(b);
   }
@@ -75,12 +75,12 @@ public class ArithmeticOperators {
   public static void main(String[] args) {
     ArithmeticOperators aop = new ArithmeticOperators();
     int a = 10, b = 20;
-    aop.addition(a, b);
-    aop.subtraction(a, b);
-    aop.multiplication(a, b);
-    aop.division(a, b);
-    aop.modulus(b, a);
-    aop.increment(a);
-    aop.decrement(b);
+    aop.doAddition(a, b);
+    aop.doSubtraction(a, b);
+    aop.doMultiplication(a, b);
+    aop.doDivision(a, b);
+    aop.doModulus(b, a);
+    aop.doIncrement(a);
+    aop.doDecrement(b);
   }
 }
