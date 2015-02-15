@@ -7,9 +7,10 @@ public class ArithmeticOperators {
    *
    * @param a
    * @param b
+   * @return
    */
-  void doAddition(int a, int b) {
-    System.out.println(a + b);
+  int doAddition(int a, int b) {
+    return a + b;
   }
 
   /**
@@ -17,9 +18,10 @@ public class ArithmeticOperators {
    *
    * @param a
    * @param b
+   * @return
    */
-  void doSubtraction(int a, int b) {
-    System.out.println(a - b);
+  int doSubtraction(int a, int b) {
+    return a - b;
   }
 
   /**
@@ -27,9 +29,10 @@ public class ArithmeticOperators {
    *
    * @param a
    * @param b
+   * @return
    */
-  void doMultiplication(int a, int b) {
-    System.out.println(a * b);
+  int doMultiplication(int a, int b) {
+    return a * b;
   }
 
   /**
@@ -37,9 +40,10 @@ public class ArithmeticOperators {
    *
    * @param a
    * @param b
+   * @return
    */
-  void doDivision(int a, int b) {
-    System.out.println(a / b);
+  int doDivision(int a, int b) {
+    return a / b;
   }
 
   /**
@@ -47,40 +51,43 @@ public class ArithmeticOperators {
    *
    * @param a
    * @param b
+   * @return
    */
-  void doModulus(int b, int a) {
-    System.out.println(b % a);
+  int doModulus(int b, int a) {
+    return b % a;
   }
 
   /**
    * Increases the value of operand by 1
    *
    * @param a
+   * @return
    */
-  void doIncrement(int a) {
+  int doIncrement(int a) {
     a++;
-    System.out.println(a);
+    return a;
   }
 
   /**
    * Decreases the value of operand by 1
    *
    * @param b
+   * @return
    */
-  void doDecrement(int b) {
+  int doDecrement(int b) {
     b--;
-    System.out.println(b);
+    return b;
   }
 
   public static void main(String[] args) {
     ArithmeticOperators aop = new ArithmeticOperators();
     int a = 10, b = 20;
-    aop.doAddition(a, b);
-    aop.doSubtraction(a, b);
-    aop.doMultiplication(a, b);
-    aop.doDivision(a, b);
-    aop.doModulus(b, a);
-    aop.doIncrement(a);
-    aop.doDecrement(b);
+    System.out.printf("%d + %d = %d", a, b, aop.doAddition(a, b));
+    System.out.printf("\n%d - %d = %d", a, b, aop.doSubtraction(a, b));
+    System.out.printf("\n%d * %d = %d", a, b, aop.doMultiplication(a, b));
+    System.out.printf("\n%d / %d = %d", a, b, aop.doDivision(a, b));
+    System.out.printf("\n%d mod %d = %d", b, a, aop.doModulus(b, a));
+    System.out.printf("\n%d++ = %d", a, aop.doIncrement(a));
+    System.out.printf("\n%d-- = %d", b, aop.doDecrement(b));
   }
 }
