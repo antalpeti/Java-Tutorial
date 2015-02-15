@@ -122,28 +122,26 @@ public class Test {
 
     a = 10;
     c = 15;
-    System.out.println("a = " + a);
-    System.out.println("c = " + c);
+    System.out.printf("a        = %3d = %8s", a, makeZeroPaddedBinary(a, 8));
+    System.out.printf("\nc        = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
     c %= a;
-    System.out.println("c %= a  = " + c);
+    System.out.print("\nc %= a   =   " + c);
+    System.out.printf(" = %8s", makeZeroPaddedBinary(c, 8));
 
     c <<= 2;
-    System.out.println("c <<= 2 = " + c);
+    System.out.printf("\nc <<= 2  = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
 
     c >>= 2;
-    System.out.println("c >>= 2 = " + c);
-
-    c >>= 2;
-    System.out.println("c >>= a = " + c);
+    System.out.printf("\nc >>= 2  = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
 
     c &= a;
-    System.out.println("c &= 2  = " + c);
+    System.out.printf("\nc &= 2   = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
 
     c ^= a;
-    System.out.println("c ^= a   = " + c);
+    System.out.printf("\nc ^= a   = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
 
     c |= a;
-    System.out.println("c |= a   = " + c);
+    System.out.printf("\nc |= a   = %3d = %8s", c, makeZeroPaddedBinary(c, 8));
   }
 
   String makeZeroPaddedBinary(int number, int bit) {
