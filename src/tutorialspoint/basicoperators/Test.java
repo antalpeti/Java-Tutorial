@@ -92,6 +92,60 @@ public class Test {
     System.out.println("!(a && b) = " + !(a && b));
   }
 
+  void printAssignmentOperatorsExample() {
+    int a = 10;
+    int b = 20;
+    int c = 0;
+
+    System.out.println("a = " + a);
+    System.out.println("b = " + b);
+
+    c = a + b;
+    System.out.println("c = a + b = " + c);
+
+    c += a;
+    System.out.println("c += a  = " + c);
+
+    c -= a;
+    System.out.println("c -= a = " + c);
+
+    c *= a;
+    System.out.println("c *= a = " + c);
+
+    a = 10;
+    c = 15;
+    System.out.println("a = " + a);
+    System.out.println("c = " + c);
+
+    c /= a;
+    System.out.println("c /= a = " + c);
+
+    a = 10;
+    c = 15;
+    System.out.println("a = " + a);
+    System.out.println("c = " + c);
+    c %= a;
+    System.out.println("c %= a  = " + c);
+
+    c <<= 2;
+    System.out.println("c <<= 2 = " + c);
+
+    c >>= 2;
+    System.out.println("c >>= 2 = " + c);
+
+    c >>= 2;
+    System.out.println("c >>= a = " + c);
+
+    c &= a;
+    System.out.println("c &= 2  = " + c);
+
+    c ^= a;
+    System.out.println("c ^= a   = " + c);
+
+    c |= a;
+    System.out.println("c |= a   = " + c);
+  }
+
   String makeZeroPaddedBinary(int number, int bit) {
     String padding = "00000000000000000000000000000000";
     String bin = padding + Integer.toBinaryString(number);
@@ -106,6 +160,8 @@ public class Test {
     System.out.println();
     t.printBitwiseOperatorsExample();
     System.out.println();
-    t.printLogicalOperatorsExample();;
+    t.printLogicalOperatorsExample();
+    System.out.println();
+    t.printAssignmentOperatorsExample();
   }
 }
