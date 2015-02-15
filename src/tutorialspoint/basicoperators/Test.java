@@ -45,42 +45,42 @@ public class Test {
     int c = 0;
     int d = -64;
 
-    System.out.printf("a = %4d = %s", a, makeZeroPaddedBinary(a));
-    System.out.printf("\nb = %4d = %s", b, makeZeroPaddedBinary(b));
-    System.out.printf("\nd = %4d = %s\n", d, makeZeroPaddedBinary(d));
+    System.out.printf("a = %4d = %s", a, makeZeroPaddedBinary(a, 8));
+    System.out.printf("\nb = %4d = %s", b, makeZeroPaddedBinary(b, 8));
+    System.out.printf("\nd = %4d = %s\n", d, makeZeroPaddedBinary(d, 8));
 
     c = a & b; /* 12 = 0000 1100 */
-    System.out.printf("\n%-8s = %s = %3d", "a & b", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a & b", makeZeroPaddedBinary(c, 8), c);
 
     c = a | b; /* 61 = 0011 1101 */
-    System.out.printf("\n%-8s = %s = %3d", "a | b", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a | b", makeZeroPaddedBinary(c, 8), c);
 
     c = a ^ b; /* 49 = 0011 0001 */
-    System.out.printf("\n%-8s = %s = %3d", "a ^ b", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a ^ b", makeZeroPaddedBinary(c, 8), c);
 
     c = ~a; /*-61 = 1100 0011 */
-    System.out.printf("\n%-8s = %s = %3d", "~a", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "~a", makeZeroPaddedBinary(c, 8), c);
 
     c = a << 2; /* 240 = 1111 0000 */
-    System.out.printf("\n%-8s = %s = %3d", "a << 2", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a << 2", makeZeroPaddedBinary(c, 8), c);
 
     c = a >> 2; /* 215 = 1111 */
-    System.out.printf("\n%-8s = %s = %3d", "a >> 2", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a >> 2", makeZeroPaddedBinary(c, 8), c);
 
     c = d >> 2; /* -16 = 1111 0000 */
-    System.out.printf("\n%-8s = %s = %3d", "d >> 2", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "d >> 2", makeZeroPaddedBinary(c, 8), c);
 
     c = d >> 6; /* -1 = 1111 1111 */
-    System.out.printf("\n%-8s = %s = %3d", "d >> 6", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "d >> 6", makeZeroPaddedBinary(c, 8), c);
 
     c = a >>> 2; /* 215 = 0000 1111 */
-    System.out.printf("\n%-8s = %s = %3d", "a >>> 2", makeZeroPaddedBinary(c), c);
+    System.out.printf("\n%-8s = %s = %3d", "a >>> 2", makeZeroPaddedBinary(c, 8), c);
   }
 
-  String makeZeroPaddedBinary(int i) {
-    String padding = "00000000";
-    String bin = padding + Integer.toBinaryString(i);
-    return bin.substring(bin.length() - 8, bin.length());
+  String makeZeroPaddedBinary(int number, int bit) {
+    String padding = "00000000000000000000000000000000";
+    String bin = padding + Integer.toBinaryString(number);
+    return bin.substring(bin.length() - bit, bin.length());
   }
 
   public static void main(String args[]) {
