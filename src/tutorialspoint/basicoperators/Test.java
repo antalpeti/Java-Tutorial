@@ -24,8 +24,23 @@ public class Test {
     System.out.println("++d   = " + (++d));
   }
 
+  void printRelationalOperatorsExample() {
+    int a = 10;
+    int b = 20;
+    System.out.println("a = " + a);
+    System.out.println("b = " + b);
+    System.out.println("a == b = " + (a == b));
+    System.out.println("a != b = " + (a != b));
+    System.out.println("a > b = " + (a > b));
+    System.out.println("a < b = " + (a < b));
+    System.out.println("b >= a = " + (b >= a));
+    System.out.println("b <= a = " + (b <= a));
+  }
+
   public static void main(String args[]) {
     Test t = new Test();
     t.printArithmeticOperatorsExample();
+    System.out.println();
+    t.printRelationalOperatorsExample();
   }
 }
