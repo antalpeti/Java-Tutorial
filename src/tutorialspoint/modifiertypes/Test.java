@@ -1,6 +1,6 @@
 package tutorialspoint.modifiertypes;
 
-public class Test {
+public final class Test {
   final int value = 10;
   // The following are examples of declaring constants:
   public static final int BOXWIDTH = 6;
