@@ -1,7 +1,7 @@
 package tutorialspoint.numbers;
 
 public class Test {
-  private static void execuetBoxing() {
+  private static void executeBoxing() {
     Integer x = 5; // boxes int to an Integer object
     x = x + 10; // unboxes the Integer to a int
     System.out.println(x);
@@ -26,12 +26,40 @@ public class Test {
     System.out.println(x.compareTo(8));
   }
 
+  private static void executeEquals() {
+    Integer x = 5;
+    Integer y = 10;
+    Integer z = 5;
+    Short a = 5;
+
+    System.out.println(x.equals(y));
+    System.out.println(x.equals(z));
+    System.out.println(x.equals(a));
+  }
+
+  private static void executeValueOf() {
+    Integer x = Integer.valueOf(9);
+    Double c = Double.valueOf(5);
+    Float a = Float.valueOf("80");
+
+    Integer b = Integer.valueOf("444", 16);
+
+    System.out.println(x);
+    System.out.println(c);
+    System.out.println(a);
+    System.out.println(b);
+  }
+
   public static void main(String args[]) {
     System.out.println("Boxing and Unboxing");
-    execuetBoxing();
+    executeBoxing();
     System.out.println("\nxxxValue()");
     executeXXXValue();
     System.out.println("\ncompareTo()");
     executeCompareTo();
+    System.out.println("\nequals()");
+    executeEquals();
+    System.out.println("\nvalueOf()");
+    executeValueOf();
   }
 }
