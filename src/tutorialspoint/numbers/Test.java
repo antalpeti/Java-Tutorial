@@ -129,7 +129,6 @@ public class Test {
 
   private static void executeExp() {
     double x = 11.635;
-    double y = 2.76;
 
     System.out.printf("The value of e is %.4f%n", Math.E);
     System.out.printf("exp(%.3f) is %.3f%n", x, Math.exp(x));
@@ -137,10 +136,39 @@ public class Test {
 
   private static void executeLog() {
     double x = 11.635;
-    double y = 2.76;
 
     System.out.printf("The value of e is %.4f%n", Math.E);
     System.out.printf("log(%.3f) is %.3f%n", x, Math.log(x));
+  }
+
+  private static void executePow() {
+    double x = 11.635;
+    double y = 2.76;
+
+    System.out.printf("The value of e is %.4f%n", Math.E);
+    System.out.printf("pow(%.3f, %.3f) is %.3f%n", x, y, Math.pow(x, y));
+  }
+
+  private static void executeSqrt() {
+    double x = 11.635;
+    System.out.printf("The value of e is %.4f%n", Math.E);
+    System.out.printf("sqrt(%.3f) is %.3f%n", x, Math.sqrt(x));
+  }
+
+  private static void executeSin() {
+    double degrees = 45.0;
+    double radians = Math.toRadians(degrees);
+
+    System.out.format("The value of pi is %.4f%n", Math.PI);
+    System.out.format("The sine of %.1f degrees is %.4f%n", degrees, Math.sin(radians));
+  }
+
+  private static void executeCos() {
+    double degrees = 45.0;
+    double radians = Math.toRadians(degrees);
+
+    System.out.format("The value of pi is %.4f%n", Math.PI);
+    System.out.format("The cosine of %.1f degrees is %.4f%n", degrees, Math.cos(radians));
   }
 
   public static void main(String args[]) {
@@ -176,5 +204,13 @@ public class Test {
     executeExp();
     System.out.println("\nlog()");
     executeLog();
+    System.out.println("\npow()");
+    executePow();
+    System.out.println("\nsqrt()");
+    executeSqrt();
+    System.out.println("\nsin()");
+    executeSin();
+    System.out.println("\ncos()");
+    executeCos();
   }
 }
