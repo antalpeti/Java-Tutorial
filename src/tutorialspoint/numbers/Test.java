@@ -67,6 +67,45 @@ public class Test {
     System.out.println(b);
   }
 
+  private static void executeAbs() {
+    Integer a = -8;
+    int b = 12;
+    double d = -100;
+    float f = -90;
+
+    System.out.println(Math.abs(a));
+    System.out.println(Math.abs(b));
+    System.out.println(Math.abs(d));
+    System.out.println(Math.abs(f));
+  }
+
+  private static void executeCeil() {
+    double d = -100.675;
+    float f = -90;
+
+    System.out.println(Math.ceil(d));
+    System.out.println(Math.ceil(f));
+  }
+
+  private static void executeFloor() {
+    double d = -100.675;
+    float f = -90;
+
+    System.out.println(Math.floor(d));
+    System.out.println(Math.floor(f));
+  }
+
+  private static void executeRint() {
+    double d = 100.675;
+    double e = 100.500;
+    double f = 100.200;
+
+    System.out.println(Math.rint(d));
+    System.out.println(Math.rint(e));
+    System.out.println(Math.rint(f));
+  }
+
+
   public static void main(String args[]) {
     System.out.println("Boxing and Unboxing");
     executeBoxing();
@@ -82,5 +121,13 @@ public class Test {
     executeToString();
     System.out.println("\nparseXXX()");
     executeParseXXX();
+    System.out.println("\nabs()");
+    executeAbs();
+    System.out.println("\nceil()");
+    executeCeil();
+    System.out.println("\nfloor()");
+    executeFloor();
+    System.out.println("\nrint()");
+    executeRint();
   }
 }
