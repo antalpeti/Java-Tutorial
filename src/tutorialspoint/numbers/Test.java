@@ -50,6 +50,23 @@ public class Test {
     System.out.println(b);
   }
 
+  private static void executeToString() {
+    Integer x = 5;
+
+    System.out.println(x.toString());
+    System.out.println(Integer.toString(12));
+  }
+
+  private static void executeParseXXX() {
+    int x = Integer.parseInt("9");
+    double c = Double.parseDouble("5");
+    int b = Integer.parseInt("444", 16);
+
+    System.out.println(x);
+    System.out.println(c);
+    System.out.println(b);
+  }
+
   public static void main(String args[]) {
     System.out.println("Boxing and Unboxing");
     executeBoxing();
@@ -61,5 +78,9 @@ public class Test {
     executeEquals();
     System.out.println("\nvalueOf()");
     executeValueOf();
+    System.out.println("\ntoString()");
+    executeToString();
+    System.out.println("\nparseXXX()");
+    executeParseXXX();
   }
 }
