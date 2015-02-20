@@ -105,6 +105,43 @@ public class Test {
     System.out.println(Math.rint(f));
   }
 
+  private static void executeRound() {
+    double d = 100.675;
+    double e = 100.500;
+    float f = 100;
+    float g = 90f;
+
+    System.out.println(Math.round(d));
+    System.out.println(Math.round(e));
+    System.out.println(Math.round(f));
+    System.out.println(Math.round(g));
+  }
+
+  private static void executeMin() {
+    System.out.println(Math.min(12.123, 12.456));
+    System.out.println(Math.min(23.12, 23.0));
+  }
+
+  private static void executeMax() {
+    System.out.println(Math.max(12.123, 12.456));
+    System.out.println(Math.max(23.12, 23.0));
+  }
+
+  private static void executeExp() {
+    double x = 11.635;
+    double y = 2.76;
+
+    System.out.printf("The value of e is %.4f%n", Math.E);
+    System.out.printf("exp(%.3f) is %.3f%n", x, Math.exp(x));
+  }
+
+  private static void executeLog() {
+    double x = 11.635;
+    double y = 2.76;
+
+    System.out.printf("The value of e is %.4f%n", Math.E);
+    System.out.printf("log(%.3f) is %.3f%n", x, Math.log(x));
+  }
 
   public static void main(String args[]) {
     System.out.println("Boxing and Unboxing");
@@ -129,5 +166,15 @@ public class Test {
     executeFloor();
     System.out.println("\nrint()");
     executeRint();
+    System.out.println("\nround()");
+    executeRound();
+    System.out.println("\nmin()");
+    executeMin();
+    System.out.println("\nmax()");
+    executeMax();
+    System.out.println("\nexp()");
+    executeExp();
+    System.out.println("\nlog()");
+    executeLog();
   }
 }
