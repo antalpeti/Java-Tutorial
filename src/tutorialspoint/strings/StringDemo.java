@@ -1,5 +1,7 @@
 package tutorialspoint.strings;
 
+import java.io.UnsupportedEncodingException;
+
 public class StringDemo {
 
   private static void executeCharAt() {
@@ -96,6 +98,63 @@ public class StringDemo {
     System.out.println("Returned Value = " + retVal);
   }
 
+  private static void executeEqualsIgnoreCase() {
+    String Str1 = new String("This is really not immutable!!");
+    String Str2 = Str1;
+    String Str3 = new String("This is really not immutable!!");
+    String Str4 = new String("This IS REALLY NOT IMMUTABLE!!");
+    boolean retVal;
+
+    retVal = Str1.equals(Str2);
+    System.out.println("Returned Value = " + retVal);
+
+    retVal = Str1.equals(Str3);
+    System.out.println("Returned Value = " + retVal);
+
+    retVal = Str1.equalsIgnoreCase(Str4);
+    System.out.println("Returned Value = " + retVal);
+  }
+
+  private static void executeGetBytes() {
+    String Str1 = new String("Welcome to Tutorialspoint.com");
+
+    try {
+      byte[] Str2 = Str1.getBytes();
+      System.out.println("Returned  Value " + Str2);
+
+      Str2 = Str1.getBytes("UTF-8");
+      System.out.println("Returned  Value " + Str2);
+
+      Str2 = Str1.getBytes("ISO-8859-1");
+      System.out.println("Returned  Value " + Str2);
+      for (byte b : Str2) {
+        System.out.print(b);
+      }
+      System.out.println();
+    } catch (UnsupportedEncodingException e) {
+      System.out.println("Unsupported character set");
+    }
+  }
+
+  private static void executeGetChars() {
+    String Str1 = new String("Welcome to Tutorialspoint.com");
+    char[] Str2 = new char[7];
+
+    try {
+      Str1.getChars(2, 9, Str2, 0);
+      System.out.print("Copied Value = ");
+      System.out.println(Str2);
+
+    } catch (Exception ex) {
+      System.out.println("Raised exception...");
+    }
+  }
+
+  private static void executeHashCode() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+    System.out.println("Hashcode for Str :" + Str.hashCode());
+  }
+
   public static void main(String args[]) {
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};
     String helloString = new String(helloArray);
@@ -138,5 +197,13 @@ public class StringDemo {
     executeEndsWith();
     System.out.println("\nequals(Object anObject)");
     executeEquals();
+    System.out.println("\nequalsIngoreCase(String anotherString)");
+    executeEqualsIgnoreCase();
+    System.out.println("\ngetBytes() and getBytes(String charsetName)");
+    executeGetBytes();
+    System.out.println("\ngetChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)");
+    executeGetChars();
+    System.out.println("\nhashCode()");
+    executeHashCode();
   }
 }
