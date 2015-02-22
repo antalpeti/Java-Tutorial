@@ -155,6 +155,51 @@ public class StringDemo {
     System.out.println("Hashcode for Str :" + Str.hashCode());
   }
 
+  private static void executeIndexOf() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+    String SubStr1 = new String("Tutorials");
+    String SubStr2 = new String("Sutorials");
+
+    System.out.print("Found Index :");
+    System.out.println(Str.indexOf('o'));
+    System.out.print("Found Index :");
+    System.out.println(Str.indexOf('o', 5));
+    System.out.print("Found Index :");
+    System.out.println(Str.indexOf(SubStr1));
+    System.out.print("Found Index :");
+    System.out.println(Str.indexOf(SubStr1, 15));
+    System.out.print("Found Index :");
+    System.out.println(Str.indexOf(SubStr2));
+  }
+
+  private static void executeIntern() {
+    String Str1 = new String("Welcome to Tutorialspoint.com");
+    String Str2 = new String("WELCOME TO SUTORIALSPOINT.COM");
+
+    System.out.print("Canonical representation:");
+    System.out.println(Str1.intern());
+
+    System.out.print("Canonical representation:");
+    System.out.println(Str2.intern());
+  }
+
+  private static void executeLastIndexOf() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+    String SubStr1 = new String("Tutorials");
+    String SubStr2 = new String("Sutorials");
+
+    System.out.print("Found Last Index :");
+    System.out.println(Str.lastIndexOf('o'));
+    System.out.print("Found Last Index :");
+    System.out.println(Str.lastIndexOf('o', 5));
+    System.out.print("Found Last Index :");
+    System.out.println(Str.lastIndexOf(SubStr1));
+    System.out.print("Found Last Index :");
+    System.out.println(Str.lastIndexOf(SubStr1, 11));
+    System.out.print("Found Last Index :");
+    System.out.println(Str.lastIndexOf(SubStr2));
+  }
+
   public static void main(String args[]) {
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};
     String helloString = new String(helloArray);
@@ -205,5 +250,13 @@ public class StringDemo {
     executeGetChars();
     System.out.println("\nhashCode()");
     executeHashCode();
+    System.out.println("\nindexOf(int ch), indexOf(int ch, int fromIndex),"
+        + " indexOf(String str) and indexOf(String str, int fromIndex)");
+    executeIndexOf();
+    System.out.println("\nintern()");
+    executeIntern();
+    System.out.println("\nlastIndexOf(int ch), lastIndexOf(int ch, int fromIndex),"
+        + " lastIndexOf(String str) and lastIndexOf(String str, int fromIndex)");
+    executeLastIndexOf();
   }
 }
