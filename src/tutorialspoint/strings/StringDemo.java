@@ -200,6 +200,58 @@ public class StringDemo {
     System.out.println(Str.lastIndexOf(SubStr2));
   }
 
+  private static void executeLength() {
+    String Str1 = new String("Welcome to Tutorialspoint.com");
+    String Str2 = new String("Tutorials");
+
+    System.out.print("String Length :");
+    System.out.println(Str1.length());
+
+    System.out.print("String Length :");
+    System.out.println(Str2.length());
+  }
+
+  private static void executeMatches() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.matches("(.*)Tutorials(.*)"));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.matches("Tutorials"));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.matches("Welcome(.*)"));
+  }
+
+  private static void executeRegionMatches() {
+    String Str1 = new String("Welcome to Tutorialspoint.com");
+    String Str2 = new String("Tutorials");
+    String Str3 = new String("TUTORIALS");
+
+    System.out.print("Return Value :");
+    System.out.println(Str1.regionMatches(11, Str2, 0, 9));
+
+    System.out.print("Return Value :");
+    System.out.println(Str1.regionMatches(11, Str3, 0, 9));
+
+    System.out.print("Return Value :");
+    System.out.println(Str1.regionMatches(true, 11, Str3, 0, 9));
+  }
+
+  private static void executeReplace() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.replace('o', 'T'));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.replace('l', 'D'));
+
+    System.out.print("Original Value: ");
+    System.out.println(Str);
+  }
+
   public static void main(String args[]) {
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};
     String helloString = new String(helloArray);
@@ -227,36 +279,65 @@ public class StringDemo {
 
     System.out.println("\ncharAt(int index)");
     executeCharAt();
+
     System.out.println("\ncompareTo(String anotherString)");
     executeCompareTo();
+
     System.out.println("\ncompareToIgnoreCase(String str)");
     executeCompareToIgnoreCase();
+
     System.out.println("\nconcat(String s)");
     executeConcat();
+
     System.out.println("\ncontentEquals(StringBuffer sb)");
     executeContentEquals();
+
     System.out.println("\ncopyValueOf(cahr[] data) "
         + "and copyValueOf(char[] data, int offset, int count)");
     executeCopyValueOf();
+
     System.out.println("\nendsWith(String suffix)");
     executeEndsWith();
+
     System.out.println("\nequals(Object anObject)");
     executeEquals();
+
     System.out.println("\nequalsIngoreCase(String anotherString)");
     executeEqualsIgnoreCase();
+
     System.out.println("\ngetBytes() and getBytes(String charsetName)");
     executeGetBytes();
+
     System.out.println("\ngetChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)");
     executeGetChars();
+
     System.out.println("\nhashCode()");
     executeHashCode();
+
     System.out.println("\nindexOf(int ch), indexOf(int ch, int fromIndex),"
         + " indexOf(String str) and indexOf(String str, int fromIndex)");
     executeIndexOf();
+
     System.out.println("\nintern()");
     executeIntern();
+
     System.out.println("\nlastIndexOf(int ch), lastIndexOf(int ch, int fromIndex),"
         + " lastIndexOf(String str) and lastIndexOf(String str, int fromIndex)");
     executeLastIndexOf();
+
+    System.out.println("\nlength()");
+    executeLength();
+
+    System.out.println("\nmatches(String regex)");
+    executeMatches();
+
+    System.out
+        .println("\nregionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len) "
+            + "and regionMatches(int toffset, String other, int ooffset, int len)");
+    executeRegionMatches();
+
+    System.out.println("\nreplace(char oldChar, char newChar)");
+    executeReplace();
+
   }
 }
