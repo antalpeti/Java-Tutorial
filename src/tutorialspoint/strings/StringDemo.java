@@ -252,6 +252,60 @@ public class StringDemo {
     System.out.println(Str);
   }
 
+  private static void executeReplaceAll() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.replaceAll("(.*)Tutorials(.*)", "AMROOD"));
+  }
+
+  private static void executeReplaceFirst() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.replaceFirst("(.*)Tutorials(.*)", "AMROOD"));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.replaceFirst("Tutorials", "AMROOD"));
+  }
+
+  private static void executeSplit() {
+    String Str = new String("Welcome-to-Tutorialspoint.com");
+
+    System.out.println("Return Value :");
+    for (String retval : Str.split("-", 2)) {
+      System.out.println(retval);
+    }
+    System.out.println("");
+    System.out.println("Return Value :");
+    for (String retval : Str.split("-", 3)) {
+      System.out.println(retval);
+    }
+    System.out.println("");
+    System.out.println("Return Value :");
+    for (String retval : Str.split("-", 0)) {
+      System.out.println(retval);
+    }
+    System.out.println("");
+    System.out.println("Return Value :");
+    for (String retval : Str.split("-")) {
+      System.out.println(retval);
+    }
+  }
+
+  private static void executeStartsWith() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.startsWith("Welcome"));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.startsWith("Tutorials"));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.startsWith("Tutorials", 11));
+  }
+
   public static void main(String args[]) {
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};
     String helloString = new String(helloArray);
@@ -332,12 +386,24 @@ public class StringDemo {
     executeMatches();
 
     System.out
-        .println("\nregionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len) "
-            + "and regionMatches(int toffset, String other, int ooffset, int len)");
+    .println("\nregionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len) "
+        + "and regionMatches(int toffset, String other, int ooffset, int len)");
     executeRegionMatches();
 
     System.out.println("\nreplace(char oldChar, char newChar)");
     executeReplace();
+
+    System.out.println("\nreplaceAll(String regex, String replacement)");
+    executeReplaceAll();
+
+    System.out.println("\nreplaceFirst(String regex, String replacement)");
+    executeReplaceFirst();
+
+    System.out.println("\nsplit(String regex) and split(String regex, int limit)");
+    executeSplit();
+
+    System.out.println("\nstartsWith(String prefix) and startsWith(String prefix, int toffset)");
+    executeStartsWith();
 
   }
 }
