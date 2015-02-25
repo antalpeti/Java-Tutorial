@@ -52,6 +52,23 @@ public class StringBufferBuilderDemo {
     System.out.println("\nreplace(int start, int end, String str)");
     executeReplace();
 
+    StringBuilder sBuilder = new StringBuilder("test");
+    sBuilder.append(" String Builder");
 
+    println(sBuilder);
+    println(sBuilder.capacity());
+    println(sBuilder.codePointAt(0));
+    println(sBuilder.codePointAt(1));
+    println(sBuilder.length());
+    println(sBuilder.hashCode());
+
+  }
+
+  private static void println(StringBuilder sBuilder) {
+    System.out.println("\n" + sBuilder);
+  }
+
+  private static void println(int number) {
+    System.out.println("\n" + number);
   }
 }
