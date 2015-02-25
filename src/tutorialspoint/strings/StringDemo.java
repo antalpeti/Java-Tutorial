@@ -1,6 +1,7 @@
 package tutorialspoint.strings;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Locale;
 
 public class StringDemo {
 
@@ -338,6 +339,45 @@ public class StringDemo {
 
     System.out.print("Return Value :");
     System.out.println(Str.toLowerCase());
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toLowerCase(Locale.getDefault()));
+  }
+
+  private static void executeToString() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toString());
+  }
+
+  private static void executeToUpperCase() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toUpperCase());
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toUpperCase(Locale.getDefault()));
+  }
+
+  private static void executeTrim() {
+    String Str = new String("   Welcome to Tutorialspoint.com   ");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.trim());
+  }
+
+  private static void executeValueOf() {
+    double d = 102939939.939;
+    boolean b = true;
+    long l = 1232874;
+    char[] arr = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
+
+    System.out.println("Return Value : " + String.valueOf(d));
+    System.out.println("Return Value : " + String.valueOf(b));
+    System.out.println("Return Value : " + String.valueOf(l));
+    System.out.println("Return Value : " + String.valueOf(arr));
   }
 
   public static void main(String args[]) {
@@ -451,5 +491,16 @@ public class StringDemo {
     System.out.println("\ntoLowerCase()");
     executeToLowerCase();
 
+    System.out.println("\ntoString()");
+    executeToString();
+
+    System.out.println("\ntoUpperCase() and toUpperCase(Locale locale)");
+    executeToUpperCase();
+
+    System.out.println("\ntrim()");
+    executeTrim();
+
+    System.out.println("\nvalueOf(primitive data type x)");
+    executeValueOf();
   }
 }
