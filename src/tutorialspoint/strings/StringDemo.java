@@ -306,6 +306,40 @@ public class StringDemo {
     System.out.println(Str.startsWith("Tutorials", 11));
   }
 
+  private static void executeSubSequence() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.subSequence(0, 10));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.subSequence(10, 15));
+  }
+
+  private static void executeSubstring() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.substring(10));
+
+    System.out.print("Return Value :");
+    System.out.println(Str.substring(10, 15));
+  }
+
+  private static void executeToCharArray() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toCharArray());
+  }
+
+  private static void executeToLowerCase() {
+    String Str = new String("Welcome to Tutorialspoint.com");
+
+    System.out.print("Return Value :");
+    System.out.println(Str.toLowerCase());
+  }
+
   public static void main(String args[]) {
     char[] helloArray = {'h', 'e', 'l', 'l', 'o', '.'};
     String helloString = new String(helloArray);
@@ -404,6 +438,18 @@ public class StringDemo {
 
     System.out.println("\nstartsWith(String prefix) and startsWith(String prefix, int toffset)");
     executeStartsWith();
+
+    System.out.println("\nsubSequence(int beginIndex, int endIndex)");
+    executeSubSequence();
+
+    System.out.println("\nsubstring(int beginIndex) and substring(int beginIndex, int endIndex)");
+    executeSubstring();
+
+    System.out.println("\ntoCharArray()");
+    executeToCharArray();
+
+    System.out.println("\ntoLowerCase()");
+    executeToLowerCase();
 
   }
 }
