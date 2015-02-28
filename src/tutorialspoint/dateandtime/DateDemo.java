@@ -26,7 +26,24 @@ public class DateDemo {
     System.out.println(now.compareTo(future));
     System.out.println(now.compareTo(now));
     System.out.println(future.compareTo(now));
+    Object nowObj = now;
+    System.out.println(now.compareTo((Date) nowObj));
+  }
 
+  private void executeEquals(Date past, Date future) {
+    System.out.println(past.equals(past));
+    System.out.println(past.equals(future));
+    System.out.println(future.equals(future));
+  }
+
+  private void executeGetTime(Date now) {
+    System.out.println(now.getTime());
+  }
+
+  private void executeSetTime(long time) {
+    Date date = new Date();
+    date.setTime(time);
+    System.out.println(date);
   }
 
   public static void main(String args[]) {
@@ -54,6 +71,21 @@ public class DateDemo {
     dd.executeClone(now);
 
     System.out.println("\ncompareTo(Date date)");
-    dd.executeCompareTo(now, future);;
+    dd.executeCompareTo(now, future);
+
+    System.out.println("\nequals(Object date)");
+    dd.executeEquals(past, future);
+
+    System.out.println("\ngetTime()");
+    dd.executeGetTime(now);
+
+    System.out.println("\nhashCode()");
+    System.out.println(now.hashCode());
+
+    System.out.println("\nsetTime()");
+    dd.executeSetTime(1276543211111L);
+
+    System.out.println("\ntoString()");
+    System.out.println(now.toString());
   }
 }
