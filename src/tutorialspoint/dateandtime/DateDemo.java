@@ -1,5 +1,6 @@
 package tutorialspoint.dateandtime;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateDemo {
@@ -46,6 +47,28 @@ public class DateDemo {
     System.out.println(date);
   }
 
+  private void executeSimpleDateFormat() {
+    Date date = new Date();
+    System.out.println(new SimpleDateFormat("'Era designator:' G ").format(date));
+    System.out.println(new SimpleDateFormat("'Year in four digits:' y ").format(date));
+    System.out.println(new SimpleDateFormat("'Month in year:' M ").format(date));
+    System.out.println(new SimpleDateFormat("'Day in month:' d ").format(date));
+    System.out.println(new SimpleDateFormat("'Hour in A.M./P.M. (1~12):' h ").format(date));
+    System.out.println(new SimpleDateFormat("'Hour in day (0~23):' H ").format(date));
+    System.out.println(new SimpleDateFormat("'Minute in hour:' m ").format(date));
+    System.out.println(new SimpleDateFormat("'Second in minute:' s ").format(date));
+    System.out.println(new SimpleDateFormat("'Millisecond:' S ").format(date));
+    System.out.println(new SimpleDateFormat("'Day in week:' E ").format(date));
+    System.out.println(new SimpleDateFormat("'Day in year:' D ").format(date));
+    System.out.println(new SimpleDateFormat("'Day of week in month:' F ").format(date));
+    System.out.println(new SimpleDateFormat("'Week in year:' w ").format(date));
+    System.out.println(new SimpleDateFormat("'Week in month:' W ").format(date));
+    System.out.println(new SimpleDateFormat("'A.M./P.M. marker:' a ").format(date));
+    System.out.println(new SimpleDateFormat("'Hour in day (1~24):' k ").format(date));
+    System.out.println(new SimpleDateFormat("'Hour in A.M./P.M. (0~11):' K ").format(date));
+    System.out.println(new SimpleDateFormat("'Time zone:' z ").format(date));
+  }
+
   public static void main(String args[]) {
     // Instantiate a Date object
     Date now = new Date();
@@ -87,5 +110,13 @@ public class DateDemo {
 
     System.out.println("\ntoString()");
     System.out.println(now.toString());
+
+    Date dNow = new Date();
+    SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+
+    System.out.println("\nCurrent Date: " + ft.format(dNow));
+
+    System.out.println("\nSimpleDateFormat codes:");
+    dd.executeSimpleDateFormat();
   }
 }
