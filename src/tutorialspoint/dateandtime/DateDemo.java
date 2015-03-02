@@ -69,6 +69,41 @@ public class DateDemo {
     System.out.println(new SimpleDateFormat("'Time zone:' z ").format(date));
   }
 
+  private void executeDateAndTimeConversionCharacters() {
+    Date date = new Date();
+    System.out.printf("%1$s %2$tc", "Complete date and time:", date);
+    System.out.printf("\n%1$s %2$tF", "ISO 8601 date:", date);
+    System.out.printf("\n%1$s %2$tD", "U.S. formatted date (month/day/year):", date);
+    System.out.printf("\n%1$s %2$tT", "24-hour time:", date);
+    System.out.printf("\n%1$s %2$tr", "12-hour time:", date);
+    System.out.printf("\n%1$s %2$tR", "24-hour time, no seconds:", date);
+    System.out.printf("\n%1$s %2$tY", "Four-digit year (with leading zeroes):", date);
+    System.out.printf("\n%1$s %2$ty", "Last two digits of the year (with leading zeroes):", date);
+    System.out.printf("\n%1$s %2$tC", "First two digits of the year (with leading zeroes):", date);
+    System.out.printf("\n%1$s %2$tB", "Full month name:", date);
+    System.out.printf("\n%1$s %2$tb", "Abbreviated month name:", date);
+    System.out.printf("\n%1$s %2$tm", "Two-digit month (with leading zeroes):", date);
+    System.out.printf("\n%1$s %2$td", "Two-digit day (with leading zeroes):", date);
+    System.out.printf("\n%1$s %2$te", "Two-digit day (without leading zeroes):", date);
+    System.out.printf("\n%1$s %2$tA", "Full weekday name:", date);
+    System.out.printf("\n%s %ta", "Abbreviated weekday name:", date);
+    System.out.printf("\n%s %tj", "Three-digit day of year (with leading zeroes):", date);
+    System.out.printf("\n%s %tH", "Two-digit hour (with leading zeroes), between 00 and 23:", date);
+    System.out.printf("\n%s %tk", "Two-digit hour (without leading zeroes), between 0 and 23:",
+        date);
+    System.out.printf("\n%s %tl", "Two-digit hour (with leading zeroes), between 01 and 12:", date);
+    System.out.printf("\n%s %tM", "Two-digit minutes (with leading zeroes):", date);
+    System.out.printf("\n%s %tS", "Two-digit seconds (with leading zeroes):", date);
+    System.out.printf("\n%s %tL", "Three-digit milliseconds (with leading zeroes):", date);
+    System.out.printf("\n%s %tN", "Nine-digit nanoseconds (with leading zeroes):", date);
+    // System.out.printf("\n%s %tP", "Uppercase morning or afternoon marker:", date);
+    System.out.printf("\n%s %tp", "Lowercase morning or afternoon marker:", date);
+    System.out.printf("\n%s %tz", "RFC 822 numeric offset from GMT:", date);
+    System.out.printf("\n%s %tZ", "Time zone:", date);
+    System.out.printf("\n%s %ts", "Seconds since 1970-01-01 00:00:00 GMT:", date);
+    System.out.printf("\n%s %tQ", "Milliseconds since 1970-01-01 00:00:00 GMT", date);
+  }
+
   public static void main(String args[]) {
     // Instantiate a Date object
     Date now = new Date();
@@ -118,5 +153,22 @@ public class DateDemo {
 
     System.out.println("\nSimpleDateFormat codes:");
     dd.executeSimpleDateFormat();
+
+    // Instantiate a Date object
+    Date date = new Date();
+
+    // display time and date using toString()
+    String str = String.format("Current Date/Time : %tc", date);
+
+    System.out.printf("\n" + str);
+
+    // display time and date using toString()
+    System.out.printf("\n%1$s %2$tB %2$td, %2$tY", "Due date:", date);
+    // display formatted date with < flag that indicates the previously used argument
+    System.out.printf("\n%s %tB %<te, %<tY", "Due date:", date);
+
+    System.out.println();
+    System.out.println("\nDate and Time Conversion Characters:");
+    dd.executeDateAndTimeConversionCharacters();
   }
 }
