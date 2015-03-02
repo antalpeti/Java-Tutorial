@@ -1,5 +1,6 @@
 package tutorialspoint.dateandtime;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -104,6 +105,23 @@ public class DateDemo {
     System.out.printf("\n%s %tQ", "Milliseconds since 1970-01-01 00:00:00 GMT", date);
   }
 
+  private void executeParseStringIntoDate(String args[]) {
+    SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+
+    String input = args.length == 0 ? "1818-11-11" : args[0];
+
+    System.out.print(input + " Parses as ");
+
+    Date t;
+
+    try {
+      t = ft.parse(input);
+      System.out.println(t);
+    } catch (ParseException e) {
+      System.out.println("Unparseable using " + ft);
+    }
+  }
+
   public static void main(String args[]) {
     // Instantiate a Date object
     Date now = new Date();
@@ -170,5 +188,11 @@ public class DateDemo {
     System.out.println();
     System.out.println("\nDate and Time Conversion Characters:");
     dd.executeDateAndTimeConversionCharacters();
+
+    System.out.println("\nParsing String into Date");
+    dd.executeParseStringIntoDate(new String[] {});
+    dd.executeParseStringIntoDate(new String[] {"2015-01-03"});
+    dd.executeParseStringIntoDate(new String[] {"2015-1-3"});
+    dd.executeParseStringIntoDate(new String[] {"2015/01/03"});
   }
 }
