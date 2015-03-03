@@ -189,7 +189,7 @@ public class DateDemo {
     System.out.println("\nDate and Time Conversion Characters:");
     dd.executeDateAndTimeConversionCharacters();
 
-    System.out.println("\nParsing String into Date");
+    System.out.println("\nParsing String into Date:");
     dd.executeParseStringIntoDate(new String[] {});
     dd.executeParseStringIntoDate(new String[] {"2015-01-03"});
     dd.executeParseStringIntoDate(new String[] {"2015-1-3"});
