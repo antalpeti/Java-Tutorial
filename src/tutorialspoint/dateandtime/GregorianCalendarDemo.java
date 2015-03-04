@@ -2,8 +2,25 @@ package tutorialspoint.dateandtime;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class GregorianCalendarDemo {
+
+  private static void executeConstructors() {
+    GregorianCalendar gcal = new GregorianCalendar();
+    System.out.println(gcal.getTime());
+    gcal = new GregorianCalendar(2010, 1, 2);
+    System.out.println(gcal.getTime());
+    gcal = new GregorianCalendar(2011, 2, 3, 4, 5);
+    System.out.println(gcal.getTime());
+    gcal = new GregorianCalendar(2012, 3, 4, 5, 6, 7);
+    System.out.println(gcal.getTime());
+    gcal = new GregorianCalendar(Locale.US);
+    System.out.println(gcal.getTime());
+    gcal = new GregorianCalendar(TimeZone.getTimeZone("PDT"));
+    System.out.println(gcal.getTime());
+  }
 
   public static void main(String args[]) {
     String months[] =
@@ -30,5 +47,8 @@ public class GregorianCalendarDemo {
     } else {
       System.out.println("The current year is not a leap year");
     }
+
+    System.out.println("\nGregorianCalendar constructors:");
+    executeConstructors();
   }
 }
