@@ -92,9 +92,42 @@ public class GregorianCalendarDemo {
     System.out.println("MILLISECOND: " + gcal.getActualMinimum(GregorianCalendar.MILLISECOND));
   }
 
+  private static void executeGetGreatestMinimum() {
+    gcal = new GregorianCalendar();
+    System.out.println("YEAR: " + gcal.getGreatestMinimum(GregorianCalendar.YEAR));
+    System.out.println("MONTH: " + gcal.getGreatestMinimum(GregorianCalendar.MONTH));
+    System.out.println("DAY_OF_MONTH: " + gcal.getGreatestMinimum(GregorianCalendar.DAY_OF_MONTH));
+    System.out.println("HOUR: " + gcal.getGreatestMinimum(GregorianCalendar.HOUR));
+    System.out.println("MINUTE: " + gcal.getGreatestMinimum(GregorianCalendar.MINUTE));
+    System.out.println("SECOND: " + gcal.getGreatestMinimum(GregorianCalendar.SECOND));
+    System.out.println("MILLISECOND: " + gcal.getGreatestMinimum(GregorianCalendar.MILLISECOND));
+  }
+
+  private static void executeGetLeastMaximum() {
+    gcal = new GregorianCalendar();
+    System.out.println("YEAR: " + gcal.getLeastMaximum(GregorianCalendar.YEAR));
+    System.out.println("MONTH: " + gcal.getLeastMaximum(GregorianCalendar.MONTH));
+    System.out.println("DAY_OF_MONTH: " + gcal.getLeastMaximum(GregorianCalendar.DAY_OF_MONTH));
+    System.out.println("HOUR: " + gcal.getLeastMaximum(GregorianCalendar.HOUR));
+    System.out.println("MINUTE: " + gcal.getLeastMaximum(GregorianCalendar.MINUTE));
+    System.out.println("SECOND: " + gcal.getLeastMaximum(GregorianCalendar.SECOND));
+    System.out.println("MILLISECOND: " + gcal.getLeastMaximum(GregorianCalendar.MILLISECOND));
+  }
+
+  private static void executeGetMaximum() {
+    gcal = new GregorianCalendar();
+    System.out.println("YEAR: " + gcal.getMaximum(GregorianCalendar.YEAR));
+    System.out.println("MONTH: " + gcal.getMaximum(GregorianCalendar.MONTH));
+    System.out.println("DAY_OF_MONTH: " + gcal.getMaximum(GregorianCalendar.DAY_OF_MONTH));
+    System.out.println("HOUR: " + gcal.getMaximum(GregorianCalendar.HOUR));
+    System.out.println("MINUTE: " + gcal.getMaximum(GregorianCalendar.MINUTE));
+    System.out.println("SECOND: " + gcal.getMaximum(GregorianCalendar.SECOND));
+    System.out.println("MILLISECOND: " + gcal.getMaximum(GregorianCalendar.MILLISECOND));
+  }
+
   public static void main(String args[]) {
     String months[] =
-        {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+      {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
     int year;
     // Create a Gregorian calendar initialized
@@ -135,5 +168,26 @@ public class GregorianCalendarDemo {
 
     System.out.println("\ngetActualMinimum(int field)");
     executeGetAcutalMinimum();
+
+    System.out.println("\ngetGreatestMinimum(int field)");
+    executeGetGreatestMinimum();;
+
+    System.out.println("\ngetGregorianChange()");
+    gcal.getGregorianChange();
+
+    System.out.println("\ngetLeastMaximum(int field)");
+    executeGetLeastMaximum();
+
+    System.out.println("\ngetMaximum(int field)");
+    executeGetMaximum();
+
+    System.out.println("\ngetTime()");
+    System.out.println(gcal.getTime());
+
+    System.out.println("\ngetTimeInMillis()");
+    System.out.println(gcal.getTimeInMillis());
+
+    System.out.println("\ngetTimeZone()");
+    System.out.println(gcal.getTimeZone());
   }
 }
