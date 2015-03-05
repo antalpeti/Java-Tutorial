@@ -125,6 +125,43 @@ public class GregorianCalendarDemo {
     System.out.println("MILLISECOND: " + gcal.getMaximum(GregorianCalendar.MILLISECOND));
   }
 
+  private static void executeIsLeapYear() {
+    gcal = new GregorianCalendar();
+    for (int i = 2000; i < 2016; i++) {
+      System.out.println(i + " is leap year: " + (gcal.isLeapYear(i) ? "yes" : "no"));
+    }
+  }
+
+  private static void executeRoll() {
+    gcal = new GregorianCalendar();
+    System.out.println(gcal.getTime());
+    gcal.roll(GregorianCalendar.YEAR, true);
+    System.out.println("YEAR --> UP " + gcal.getTime());
+    gcal.roll(GregorianCalendar.MONTH, false);
+    System.out.println("MONTH--> DOWN " + gcal.getTime());
+    gcal.roll(GregorianCalendar.DAY_OF_MONTH, true);
+    System.out.println("DAY_OF_MONTH --> UP " + gcal.getTime());
+    gcal.roll(GregorianCalendar.HOUR, true);
+    System.out.println("HOUR --> UP " + gcal.getTime());
+    gcal.roll(GregorianCalendar.MINUTE, false);
+    System.out.println("MINUTE --> DOWN " + gcal.getTime());
+  }
+
+  private static void executeSet() {
+    gcal = new GregorianCalendar();
+    System.out.println(gcal.getTime());
+    gcal.set(GregorianCalendar.YEAR, 2017);
+    System.out.println(gcal.getTime());
+    gcal.set(GregorianCalendar.DAY_OF_MONTH, 15);
+    System.out.println(gcal.getTime());
+    gcal.set(2018, 11, 24);
+    System.out.println(gcal.getTime());
+    gcal.set(2018, 11, 24, 11, 12);
+    System.out.println(gcal.getTime());
+    gcal.set(2018, 11, 24, 11, 12, 50);
+    System.out.println(gcal.getTime());
+  }
+
   public static void main(String args[]) {
     String months[] =
       {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
@@ -189,5 +226,18 @@ public class GregorianCalendarDemo {
 
     System.out.println("\ngetTimeZone()");
     System.out.println(gcal.getTimeZone());
+
+    System.out.println("\nisLeapYear(int year)");
+    executeIsLeapYear();
+
+    System.out.println("\nroll(int field, int value)");
+    executeRoll();
+
+    System.out.println("\nset(int field, int value), set(int year, int month, int date),"
+        + " set(int year, int month, int date, int hour, int minute ) and"
+        + " set(int year, int month, int date, int hour, int minute, int second)");
+    executeSet();
+
+    System.out.println(gcal.toString());
   }
 }
