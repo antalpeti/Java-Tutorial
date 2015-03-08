@@ -55,6 +55,66 @@ public class RegexMatches {
     while (m.find()) {
       System.out.println("Matches 0 or 1 occurrence of preceding expression: " + m.group(0));
     }
+    line = "RegReggRegggRegular.";
+    m = Pattern.compile("Reg{2}").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches exactly n number of occurrences of preceding expression: "
+          + m.group(0));
+    }
+    m = Pattern.compile("Reg{2,}").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches n or more occurrences of preceding expression: " + m.group(0));
+    }
+    m = Pattern.compile("Reg{1,2}").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches at least n and at most m occurrences of preceding expression: "
+          + m.group(0));
+    }
+    line = "ea eb ef eg";
+    m = Pattern.compile("ea|eb").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches either a or b: " + m.group(0));
+    }
+    line = "abaabbabbabddeeabd";
+    m = Pattern.compile("(ab)*(bd)").matcher(line);
+    while (m.find()) {
+      System.out.println("Groups regular expressions and remembers matched text: " + m.group(0));
+    }
+    m = Pattern.compile("(?:abba)").matcher(line);
+    while (m.find()) {
+      System.out.println("Groups regular expressions without remembering matched text: "
+          + m.group(0));
+    }
+    m = Pattern.compile("(?>abba)").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches independent pattern without backtracking: " + m.group(0));
+    }
+    line = "abc 123.+-";
+    m = Pattern.compile("\\w").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches word characters: " + m.group(0));
+    }
+    m = Pattern.compile("\\W").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches nonword characters: " + m.group(0));
+    }
+    line = "a bc def 1234\n\t\r";
+    m = Pattern.compile("\\s").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches whitespace. Equivalent to [\\t\\n\\r\\f]: " + m.group(0));
+    }
+    m = Pattern.compile("\\S").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches nonwhitespace: " + m.group(0));
+    }
+    m = Pattern.compile("\\d").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches digits. Equivalent to [0-9]: " + m.group(0));
+    }
+    m = Pattern.compile("\\D").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches nondigits: " + m.group(0));
+    }
   }
 
   public static void main(String args[]) {
