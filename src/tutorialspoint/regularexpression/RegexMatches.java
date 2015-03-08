@@ -145,6 +145,24 @@ public class RegexMatches {
     }
   }
 
+  private static void executeIndexMethods() {
+    String line = "ab abc abcd abcde";
+    Matcher m = Pattern.compile("ab").matcher(line);
+    while (m.find()) {
+      System.out.println(" " + m.group(0));
+      System.out.println("Start index: " + m.start());
+      System.out.println("End index: " + m.end());
+    }
+    m = Pattern.compile("(a+)(b?)(c*)").matcher(line);
+    while (m.find()) {
+      for (int i = 0; i < m.groupCount(); i++) {
+        System.out.println(" " + m.group(i));
+        System.out.println("Start group index: " + m.start(i));
+        System.out.println("End group index: " + m.end(i));
+      }
+    }
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -169,5 +187,7 @@ public class RegexMatches {
 
     System.out.println("\nRegluar Expression Metacharacters");
     executeRegExMetacharacter();
+    System.out.println("\nIndex methods of the Matcher class");
+    executeIndexMethods();
   }
 }
