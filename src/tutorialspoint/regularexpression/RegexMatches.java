@@ -199,6 +199,34 @@ public class RegexMatches {
     System.out.println(m.replaceFirst("magic"));
   }
 
+  private static void executeStartEnd() {
+    String regex = "\\bcat\\b";
+    String input = "cat cat cat cattie cat";
+    Pattern p = Pattern.compile(regex);
+    Matcher m = p.matcher(input); // get a matcher object
+    int count = 0;
+
+    while (m.find()) {
+      count++;
+      System.out.println("Match number " + count);
+      System.out.println("start(): " + m.start());
+      System.out.println("end(): " + m.end());
+    }
+  }
+
+  private static void executeLookingAtAndMatches() {
+    String REGEX = "foo";
+    String INPUT = "fooooooooooooooooo";
+    Pattern pattern = Pattern.compile(REGEX);
+    Matcher matcher = pattern.matcher(INPUT);
+
+    System.out.println("Current REGEX is: " + REGEX);
+    System.out.println("Current INPUT is: " + INPUT);
+
+    System.out.println("lookingAt(): " + matcher.lookingAt());
+    System.out.println("matches(): " + matcher.matches());
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -229,5 +257,9 @@ public class RegexMatches {
     executeStudyMethods();
     System.out.println("\nReplacement methods of the Matcher class");
     executeReplacementMethods();
+    System.out.println("\nstart() and end():");
+    executeStartEnd();
+    System.out.println("\nlookingAt() and matches():");
+    executeLookingAtAndMatches();
   }
 }
