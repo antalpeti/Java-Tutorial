@@ -184,6 +184,21 @@ public class RegexMatches {
     }
   }
 
+  private static void executeReplacementMethods() {
+    StringBuffer sb = new StringBuffer("some old thing ");
+    Pattern p = Pattern.compile("old");
+    Matcher m = p.matcher(sb);
+    while (m.find()) {
+      m.appendReplacement(sb, "new");
+      System.out.println(sb);
+      m.appendTail(sb);
+      System.out.println(sb);
+      System.out.println(m.replaceAll("cube"));
+    }
+    m = Pattern.compile("thing").matcher(sb);
+    System.out.println(m.replaceFirst("magic"));
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -212,5 +227,7 @@ public class RegexMatches {
     executeIndexMethods();
     System.out.println("\nStudy methods of the Matcher class");
     executeStudyMethods();
+    System.out.println("\nReplacement methods of the Matcher class");
+    executeReplacementMethods();
   }
 }
