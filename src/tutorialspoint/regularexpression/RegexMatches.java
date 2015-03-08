@@ -163,6 +163,27 @@ public class RegexMatches {
     }
   }
 
+  private static void executeStudyMethods() {
+    String line = "ab abc";
+    Matcher m = Pattern.compile("ab").matcher(line);
+    while (m.find()) {
+      System.out.println("find: " + m.group());
+    }
+    if (m.find(0)) {
+      System.out.println("find(0): " + m.group());
+    }
+    line = "abc";
+    m = Pattern.compile("abc").matcher(line);
+    if (m.matches()) {
+      System.out.println("matches(): " + m.group());
+    }
+    line = "abcdef";
+    m = Pattern.compile("ab").matcher(line);
+    if (m.lookingAt()) {
+      System.out.println("lookingAt(): " + m.group());
+    }
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -189,5 +210,7 @@ public class RegexMatches {
     executeRegExMetacharacter();
     System.out.println("\nIndex methods of the Matcher class");
     executeIndexMethods();
+    System.out.println("\nStudy methods of the Matcher class");
+    executeStudyMethods();
   }
 }
