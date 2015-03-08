@@ -115,6 +115,34 @@ public class RegexMatches {
     while (m.find()) {
       System.out.println("Matches nondigits: " + m.group(0));
     }
+    line = "12=123 1234";
+    m = Pattern.compile("\\G(12)").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches point where last match finished: " + m.group(0));
+    }
+    m = Pattern.compile("(12|123)=\\1").matcher(line);
+    while (m.find()) {
+      System.out.println("Back-reference to capture group number \"n\": " + m.group(0));
+    }
+    line = "aside (side) bside side [side] {side}";
+    m = Pattern.compile("\\bside\\b").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches word boundaries when outside brackets: " + m.group(0));
+    }
+    m = Pattern.compile("\\Bside\\b").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches nonword boundaries: " + m.group(0));
+    }
+    line = "\t\n";
+    m = Pattern.compile("\n").matcher(line);
+    while (m.find()) {
+      System.out.println("Matches newlines, carriage returns, tabs, etc: " + m.group(0));
+    }
+    line = "abcd'escapede'fg\"escaped\"";
+    m = Pattern.compile("\\Qescape\\E").matcher(line);
+    while (m.find()) {
+      System.out.println("Escape (quote) all characters from \\Q up to \\E: " + m.group(0));
+    }
   }
 
   public static void main(String args[]) {
