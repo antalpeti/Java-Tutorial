@@ -227,6 +227,35 @@ public class RegexMatches {
     System.out.println("matches(): " + matcher.matches());
   }
 
+  private static void executeReplaceFirstAndReplaceAll() {
+    String regex = "dog";
+    String input = "The dog says meow. " + "All dogs say meow.";
+    String replace = "cat";
+
+    Pattern p = Pattern.compile(regex);
+    // get a matcher object
+    Matcher m = p.matcher(input);
+    System.out.println(m.replaceFirst(replace));
+    input = m.replaceAll(replace);
+    System.out.println(input);
+  }
+
+  private static void executeAppendReplacementAndAppendTail() {
+    String regex = "a*b";
+    String input = "aabfooaabfooabfoob";
+    String replace = "-";
+    Pattern p = Pattern.compile(regex);
+    // get a matcher object
+    Matcher m = p.matcher(input);
+    StringBuffer sb = new StringBuffer();
+    while (m.find()) {
+      m.appendReplacement(sb, replace);
+    }
+    System.out.println(sb);
+    m.appendTail(sb);
+    System.out.println(sb.toString());
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -261,5 +290,9 @@ public class RegexMatches {
     executeStartEnd();
     System.out.println("\nlookingAt() and matches():");
     executeLookingAtAndMatches();
+    System.out.println("\nreplaceFirst() and replaceAll():");
+    executeReplaceFirstAndReplaceAll();
+    System.out.println("\nappendReplacement() and appendTail():");
+    executeAppendReplacementAndAppendTail();
   }
 }
