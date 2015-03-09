@@ -2,6 +2,7 @@ package tutorialspoint.regularexpression;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class RegexMatches {
 
@@ -256,6 +257,18 @@ public class RegexMatches {
     System.out.println(sb.toString());
   }
 
+  private static void executePatternSyntaxException() {
+    String pattern = "(.*";
+    try {
+      Pattern.compile(pattern);
+    } catch (PatternSyntaxException pse) {
+      System.out.println("getDescription: " + pse.getDescription());
+      System.out.println("getIndex: " + pse.getIndex());
+      System.out.println("getPattern: " + pse.getPattern());
+      System.out.println("getMessage: " + pse.getMessage());
+    }
+  }
+
   public static void main(String args[]) {
 
     // String to be scanned to find the pattern.
@@ -294,5 +307,7 @@ public class RegexMatches {
     executeReplaceFirstAndReplaceAll();
     System.out.println("\nappendReplacement() and appendTail():");
     executeAppendReplacementAndAppendTail();
+    System.out.println("\nPatternSyntaxException");
+    executePatternSyntaxException();
   }
 }
