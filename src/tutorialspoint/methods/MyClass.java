@@ -8,4 +8,9 @@ class MyClass {
   MyClass() {
     x = 10;
   }
+
+  // Following is the constructor
+  MyClass(int i) {
+    x = i;
+  }
 }
