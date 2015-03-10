@@ -11,6 +11,7 @@ public class CopyFile {
   public static void main(String args[]) throws IOException {
     useByteStreams();
     useCharacterStreams();
+    copyLogo();
   }
 
   /**
@@ -28,6 +29,28 @@ public class CopyFile {
     try {
       in = new FileInputStream("files/byte_input.txt");
       out = new FileOutputStream("files/byte_output.txt");
+
+      int c;
+      while ((c = in.read()) != -1) {
+        out.write(c);
+      }
+    } finally {
+      if (in != null) {
+        in.close();
+      }
+      if (out != null) {
+        out.close();
+      }
+    }
+  }
+
+  private static void copyLogo() throws FileNotFoundException, IOException {
+    FileInputStream in = null;
+    FileOutputStream out = null;
+
+    try {
+      in = new FileInputStream("files/javalogo_input.png");
+      out = new FileOutputStream("files/javalogo_output.png");
 
       int c;
       while ((c = in.read()) != -1) {
