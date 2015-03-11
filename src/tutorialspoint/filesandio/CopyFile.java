@@ -44,28 +44,6 @@ public class CopyFile {
     }
   }
 
-  private static void copyLogo() throws FileNotFoundException, IOException {
-    FileInputStream in = null;
-    FileOutputStream out = null;
-
-    try {
-      in = new FileInputStream("files/javalogo_input.png");
-      out = new FileOutputStream("files/javalogo_output.png");
-
-      int c;
-      while ((c = in.read()) != -1) {
-        out.write(c);
-      }
-    } finally {
-      if (in != null) {
-        in.close();
-      }
-      if (out != null) {
-        out.close();
-      }
-    }
-  }
-
   /**
    * Java <b>Byte</b> streams are used to perform input and output of 8-bit bytes, where as Java
    * <b>Character</b> streams are used to perform input and output for 16-bit unicode. Though there
@@ -84,6 +62,28 @@ public class CopyFile {
     try {
       in = new FileReader("./files/character_input.txt");
       out = new FileWriter("./files\\character_output.txt");
+
+      int c;
+      while ((c = in.read()) != -1) {
+        out.write(c);
+      }
+    } finally {
+      if (in != null) {
+        in.close();
+      }
+      if (out != null) {
+        out.close();
+      }
+    }
+  }
+
+  private static void copyLogo() throws FileNotFoundException, IOException {
+    FileInputStream in = null;
+    FileOutputStream out = null;
+
+    try {
+      in = new FileInputStream("files/javalogo_input.png");
+      out = new FileOutputStream("files/javalogo_output.png");
 
       int c;
       while ((c = in.read()) != -1) {
