@@ -8,19 +8,19 @@ import java.io.InputStream;
 public class ReadFile {
   public static void main(String[] args) throws IOException {
     File file;
-    InputStream f = null;
+    InputStream fis = null;
     try {
       file = new File("./files/hello.txt");
-      f = new FileInputStream(file);
+      fis = new FileInputStream(file);
       int c;
-      while ((c = f.read()) != -1) {
-        System.out.println("Available:" + f.available());
+      while ((c = fis.read()) != -1) {
+        System.out.println("Available:" + fis.available());
         System.out.println("Actual byte: " + c + " Actual character: " + (char) c);
       }
       System.out.println("\nReset called");
     } finally {
-      if (f instanceof InputStream) {
-        f.close();
+      if (fis instanceof InputStream) {
+        fis.close();
       }
     }
   }
