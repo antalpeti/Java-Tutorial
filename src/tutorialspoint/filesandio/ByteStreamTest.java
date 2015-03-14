@@ -26,7 +26,7 @@ public class ByteStreamTest {
 
     ByteArrayInputStream bInput = new ByteArrayInputStream(b);
 
-    for (int y = 0; y < 3; y++) {
+    for (int y = 0; y < 4; y++) {
       if (y == 0) {
         System.out.println("Converting characters to Upper case ");
         while ((c = bInput.read()) != -1) {
@@ -50,6 +50,14 @@ public class ByteStreamTest {
         while (bInput.available() != 0) {
           System.out.println((char) bInput.read());
           System.out.println("Skipped byte(s): " + bInput.skip(1));
+        }
+      } else if (y == 3) {
+        System.out.println("Using mark");
+        System.out.println("markSupported: " + bInput.markSupported());
+        bInput.mark(1);
+        bInput.reset();
+        while (bInput.available() != 0) {
+          System.out.println((char) bInput.read());
         }
       }
       System.out.println();
