@@ -1,22 +1,19 @@
 /**
  * Contains some examples about Basic Datatypes topic.
  *
- *
  * <p>
- * Java language supports few special escape sequences for String and char literals as well. They
- * are:
+ * Java language supports few special escape sequences for String and char literals as well.
  * </p>
+ *
  * <style> table { border-collapse: collapse; width: 100%; vertical-align: middle; text-align:
- * center;} table, td, th { border: 1px solid black; } thead {color: green} tbody{color:
- * blue}</style>
+ * center;} table, td, th { border: 1px solid black; } th {color: green} td {color: blue}</style>
+ * <p>
  * <table>
- * <table>
- * <thead>
+ * <caption>The Escape Sequences</caption><tbody>
  * <tr>
  * <th>Notation</th>
  * <th>Character represented</th>
  * </tr>
- * </thead> <tbody>
  * <tr>
  * <td>\n</td>
  * <td>Newline (0x0a)</td>
@@ -63,5 +60,6 @@
  * </tr>
  * </tbody>
  * </table>
+ * </p>
  */
 package tutorialspoint.basicdatatypes;
