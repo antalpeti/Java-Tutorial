@@ -8,8 +8,9 @@
  * </p>
  * <style> table { border-collapse: collapse; width: 100%; vertical-align: middle; text-align:
  * center;} table, td, th { border: 1px solid black; } </style>
+ * <p>
  * <table>
- * <tbody>
+ * <caption>Reserved words in Java</caption><tbody>
  * <tr>
  * <td>abstract</td>
  * <td>assert</td>
@@ -90,5 +91,6 @@
  * </tr>
  * </tbody>
  * </table>
+ * </p>
  */
 package tutorialspoint.quickguide;
