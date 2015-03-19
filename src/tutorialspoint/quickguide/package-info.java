@@ -6,8 +6,7 @@
  * The following list shows the reserved words in Java. These reserved words may not be used as
  * constant or variable or any other identifier names.
  * </p>
- * <style> table { border-collapse: collapse; width: 100%; vertical-align: middle; text-align:
- * center;} table, td, th { border: 1px solid black; } </style>
+ * <head> <link rel="stylesheet" type="text/css" href="../../../files/mystyle.css"> </head>
  * <p>
  * <table>
  * <caption>Reserved words in Java</caption><tbody>

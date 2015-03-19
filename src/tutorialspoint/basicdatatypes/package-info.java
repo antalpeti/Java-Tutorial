@@ -5,8 +5,7 @@
  * Java language supports few special escape sequences for String and char literals as well.
  * </p>
  *
- * <style> table { border-collapse: collapse; width: 100%; vertical-align: middle; text-align:
- * center;} table, td, th { border: 1px solid black; } th {color: green} td {color: blue}</style>
+ * <head> <link rel="stylesheet" type="text/css" href="../../../files/mystyle.css"> </head>
  * <p>
  * <table>
  * <caption>The Escape Sequences</caption><tbody>

@@ -1,10 +1,8 @@
 /**
  * Contains some examples about Decision Making topic.
  *
- * <style>pre.prettyprint { border: 1px solid #D6D6D6; background-color: #EEE;width: 98%;
- * border-radius: 0px; padding: 5px; margin: 0px 0px 10px; font-size: 12px; overflow: auto; } .pun,
- * .opn, .clo { color: #660; } .typ { color: #7F0055; } .pln { color: #000;} .com { color: #800; }}
- * .kwd { color: #008; }</style>
+ *
+ * <head> <link rel="stylesheet" type="text/css" href="../../../files/mystyle.css"> </head>
  * <p>
  * The if Statement::
  *
@@ -61,7 +59,7 @@
  *
  * <p>
  * The switch Statement:
- * 
+ *
  * <pre style="" class="prettyprint prettyprinted">
  * <span class="kwd">switch</span><span class="pun">(</span><span class="pln">expression</span><span class="pun">){</span><span class="pln">
  *     </span><span class="kwd">case</span><span class="pln"> value </span><span class="pun">:</span><span class="pln">
@@ -75,7 +73,7 @@
  *        </span><span class="com">//Statements</span><span class="pln">
  * </span><span class="pun">}</span>
  * </pre>
- * 
+ *
  * </p>
  */
 package tutorialspoint.decisionmaking;

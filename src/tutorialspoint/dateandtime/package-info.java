@@ -1,8 +1,7 @@
 /**
  * Contains some examples about Date & Time topic.
  *
- * <style> table { border-collapse: collapse; width: 100%; vertical-align: middle; text-align:
- * center;} table, td, th { border: 1px solid black; } </style>
+ * <head> <link rel="stylesheet" type="text/css" href="../../../files/mystyle.css"> </head>
  * <p>
  * <table>
  * <caption>Simple DateFormat format codes</caption> <tbody>
