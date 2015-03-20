@@ -8,14 +8,14 @@ public class ByteStreamTest {
 
   public static void main(String args[]) throws IOException {
 
-    ByteArrayOutputStream bOutput = new ByteArrayOutputStream(12);
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
 
-    while (bOutput.size() != 10) {
+    while (baos.size() != 10) {
       // Gets the inputs from the user
-      bOutput.write(System.in.read());
+      baos.write(System.in.read());
     }
 
-    byte b[] = bOutput.toByteArray();
+    byte b[] = baos.toByteArray();
     System.out.println("Print the content");
     for (int x = 0; x < b.length; x++) {
       // printing the characters
@@ -24,19 +24,19 @@ public class ByteStreamTest {
     System.out.println();
     int c;
 
-    ByteArrayInputStream bInput = new ByteArrayInputStream(b);
+    ByteArrayInputStream bais = new ByteArrayInputStream(b);
 
     for (int y = 0; y < 4; y++) {
       if (y == 0) {
         System.out.println("Converting characters to Upper case ");
-        while ((c = bInput.read()) != -1) {
+        while ((c = bais.read()) != -1) {
           System.out.println(Character.toUpperCase((char) c));
         }
       } else if (y == 1) {
         System.out.println("Putting into an array ");
-        byte[] a = new byte[bOutput.size()];
-        while (bInput.available() != 0) {
-          bInput.read(a, 5, 4);
+        byte[] a = new byte[baos.size()];
+        while (bais.available() != 0) {
+          bais.read(a, 5, 4);
         }
         for (byte e : a) {
           if (e == 0) {
@@ -47,21 +47,23 @@ public class ByteStreamTest {
         }
       } else if (y == 2) {
         System.out.println("Using skip");
-        while (bInput.available() != 0) {
-          System.out.println((char) bInput.read());
-          System.out.println("Skipped byte(s): " + bInput.skip(1));
+        while (bais.available() != 0) {
+          System.out.println((char) bais.read());
+          baos.toString();
+          System.out.println("Skipped byte(s): " + bais.skip(1));
         }
       } else if (y == 3) {
         System.out.println("Using mark");
-        System.out.println("markSupported: " + bInput.markSupported());
-        bInput.mark(1);
-        bInput.reset();
-        while (bInput.available() != 0) {
-          System.out.println((char) bInput.read());
+        System.out.println("markSupported: " + bais.markSupported());
+        bais.mark(1);
+        bais.reset();
+        while (bais.available() != 0) {
+          System.out.println((char) bais.read());
         }
+        baos.writeTo(System.out);
       }
       System.out.println();
-      bInput.reset();
+      bais.reset();
     }
 
   }
