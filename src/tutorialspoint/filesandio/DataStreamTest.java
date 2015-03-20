@@ -22,10 +22,10 @@ public class DataStreamTest {
     }
     d.close();
     out.close();
-    readMethods();
+    readAndWriteMethods();
   }
 
-  private static void readMethods() throws IOException {
+  private static void readAndWriteMethods() throws IOException {
     DataInputStream dis = new DataInputStream(System.in);
     DataOutputStream dos = new DataOutputStream(new FileOutputStream("./files/Handwrites.txt"));
     System.out.println("Start typing!");
