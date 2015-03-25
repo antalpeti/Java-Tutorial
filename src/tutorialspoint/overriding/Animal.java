@@ -9,4 +9,6 @@ class Animal {
   public A calucalte() {
     return new A();
   }
+
+  protected void restrict() {}
 }

@@ -16,4 +16,9 @@ class Dog extends Animal {
   public B calucalte() {
     return new B();
   }
+
+  @Override
+  public void restrict() {
+    super.restrict();
+  }
 }
