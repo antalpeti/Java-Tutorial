@@ -1,5 +1,9 @@
 package tutorialspoint.overriding;
 
+import java.security.GeneralSecurityException;
+
+import javax.crypto.BadPaddingException;
+
 class Dog extends Animal {
 
   @Override
@@ -20,5 +24,11 @@ class Dog extends Animal {
   @Override
   public void restrict() {
     super.restrict();
+  }
+
+  @Override
+  public void throwException() throws GeneralSecurityException, BadPaddingException,
+      RuntimeException {
+    super.throwException();
   }
 }

@@ -1,5 +1,7 @@
 package tutorialspoint.overriding;
 
+import java.security.GeneralSecurityException;
+
 class Animal {
 
   public void move() {
@@ -11,4 +13,8 @@ class Animal {
   }
 
   protected void restrict() {}
+
+  public void throwException() throws GeneralSecurityException {
+
+  }
 }
