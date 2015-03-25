@@ -9,5 +9,7 @@ public class TestDog {
     a.move();// Runs the method in Animal class
 
     b.move();// Runs the method in Dog class
+
+    // b.bark(); // Compile time error
   }
 }
