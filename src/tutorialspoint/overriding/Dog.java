@@ -11,4 +11,9 @@ class Dog extends Animal {
   public void bark() {
     System.out.println("Dogs can bark");
   }
+
+  @Override
+  public B calucalte() {
+    return new B();
+  }
 }
