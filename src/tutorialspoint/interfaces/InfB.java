@@ -1,5 +1,6 @@
 package tutorialspoint.interfaces;
 
-public interface InfB {
 
+public interface InfB {
+  void method() throws Exception;
 }
