@@ -25,7 +25,9 @@
  * flexibility and extensibility to our code.
  * </p>
  *
- * <h2>Benefits of Encapsulation:</h2>
+ * <p>
+ * Benefits of Encapsulation:
+ * </p>
  *
  * <ul>
  * <li>
