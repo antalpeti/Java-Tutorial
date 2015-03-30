@@ -2,10 +2,10 @@
  * Contains some examples about Abstraction topic.
  *
  * <p>
- * Abstraction refers to the ability to make a class abstract in OOP. An abstract class is one that
- * cannot be instantiated. All other functionality of the class still exists, and its fields,
- * methods, and constructors are all accessed in the same manner. You just cannot create an instance
- * of the abstract class.
+ * Abstraction refers to the ability to make a class abstract in OOP. An <b>abstract class</b> is
+ * one that cannot be instantiated. All other functionality of the class still exists, and its
+ * fields, methods, and constructors are all accessed in the same manner. You just cannot create an
+ * instance of the abstract class.
  * </p>
  *
  * <p>
@@ -15,8 +15,8 @@
  * </p>
  *
  * <p>
- * The abstract keyword is also used to declare a method as abstract. An abstract method consists of
- * a method signature, but no method body.
+ * The abstract keyword is also used to declare a method as abstract. An <b>abstract method</b>
+ * consists of a method signature, but no method body.
  * </p>
  *
  * <p>
