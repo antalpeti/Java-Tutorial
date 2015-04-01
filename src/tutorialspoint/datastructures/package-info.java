@@ -159,6 +159,41 @@
  * storage functionality.
  * </p>
  *
+ * <h2>The Map Interface</h2>
+ * <p>
+ * The Map interface maps unique keys to values. A key is an object that you use to retrieve a value
+ * at a later date.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Given a key and a value, you can store the value in a Map object. After the value is stored, you
+ * can retrieve it by using its key.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Several methods throw a NoSuchElementException when no items exist in the invoking map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A ClassCastException is thrown when an object is incompatible with the elements in a map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A NullPointerException is thrown if an attempt is made to use a null object and null is not
+ * allowed in the map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * An UnsupportedOperationException is thrown when an attempt is made to change an unmodifiable map.
+ * </p>
+ * </li>
+ * </ul>
+ *
  * <h2>The Hashtable</h2>
  * <p>
  * The Hashtable class provides a means of organizing data based on some user-defined key structure.
