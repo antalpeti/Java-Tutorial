@@ -57,6 +57,16 @@
  * For example, Enumeration defines a method called nextElement that is used to get the next element
  * in a data structure that contains multiple elements.
  * </p>
+ * <p>
+ * The Enumeration interface defines the methods by which you can enumerate (obtain one at a time)
+ * the elements in a collection of objects.
+ * </p>
+ * <p>
+ * This legacy interface has been superceded by Iterator. Although not deprecated, Enumeration is
+ * considered obsolete for new code. However, it is used by several methods defined by the legacy
+ * classes such as Vector and Properties, is used by several other API classes, and is currently in
+ * widespread use in application code.
+ * </p>
  *
  * <h2>The BitSet</h2>
  * <p>
@@ -65,6 +75,13 @@
  * <p>
  * This class is very useful in cases where you need to keep up with a set of Boolean values; you
  * just assign a bit to each value and set or clear it as appropriate.
+ * </p>
+ * <p>
+ * A BitSet class creates a special type of array that holds bit values. The BitSet array can
+ * increase in size as needed. This makes it similar to a vector of bits.
+ * </p>
+ * <p>
+ * This is a legacy class but it has been completely re-engineered in Java 2, version 1.4.
  * </p>
  *
  * <h2>The Vector</h2>
@@ -79,11 +96,10 @@
  * The nice thing about using the Vector class is that you don't have to worry about setting it to a
  * specific size upon creation; it shrinks and grows automatically when necessary.
  * </p>
- *
  * <p>
  * Vector implements a dynamic array. It is similar to ArrayList, but with two differences:
  * </p>
- * <ul class="list">
+ * <ul>
  * <li>
  * <p>
  * Vector is synchronized.
@@ -107,6 +123,13 @@
  * <p>
  * When you pull an element off the stack, it comes off the top. In other words, the last element
  * you added to the stack is the first one to come back off.
+ * </p>
+ * <p>
+ * Stack is a subclass of Vector that implements a standard last-in, first-out stack.
+ * </p>
+ * <p>
+ * Stack only defines the default constructor, which creates an empty stack. Stack includes all the
+ * methods defined by Vector, and adds several of its own.
  * </p>
  *
  * <h2>The Dictionary</h2>
