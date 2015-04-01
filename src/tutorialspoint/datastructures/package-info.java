@@ -80,6 +80,22 @@
  * specific size upon creation; it shrinks and grows automatically when necessary.
  * </p>
  *
+ * <p>
+ * Vector implements a dynamic array. It is similar to ArrayList, but with two differences:
+ * </p>
+ * <ul class="list">
+ * <li>
+ * <p>
+ * Vector is synchronized.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Vector contains many legacy methods that are not part of the collections framework.
+ * </p>
+ * </li>
+ * </ul>
+ *
  * <h2>The Stack</h2>
  * <p>
  * The Stack class implements a last-in-first-out (LIFO) stack of elements.
