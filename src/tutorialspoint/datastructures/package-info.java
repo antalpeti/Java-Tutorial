@@ -206,6 +206,57 @@
  * The specific meaning of keys in regard to hash tables is totally dependent on the usage of the
  * hash table and the data it contains.
  * </p>
+ * <p>
+ * Hashtable was part of the original java.util and is a concrete implementation of a Dictionary.
+ * </p>
+ * <p>
+ * However, Java 2 re-engineered Hashtable so that it also implements the Map interface. Thus,
+ * Hashtable is now integrated into the collections framework. It is similar to HashMap, but is
+ * synchronized.
+ * </p>
+ * <p>
+ * Like HashMap, Hashtable stores key/value pairs in a hash table. When using a Hashtable, you
+ * specify an object that is used as a key, and the value that you want linked to that key. The key
+ * is then hashed, and the resulting hash code is used as the index at which the value is stored
+ * within the table.
+ * </p>
+ * <p>
+ * The Hashtable defines four constructors. The first version is the default constructor:
+ * </p>
+ *
+ * <pre>
+ * <code>Hashtable</code>
+ * </pre>
+ * <p>
+ * The second version creates a hash table that has an initial size specified by size:
+ * </p>
+ *
+ * <pre>
+ * <code>Hashtable(int size)</code>
+ * </pre>
+ * <p>
+ * The third version creates a hash table that has an initial size specified by size and a fill
+ * ratio specified by fillRatio.
+ * </p>
+ * <p>
+ * This ratio must be between 0.0 and 1.0, and it determines how full the hash table can be before
+ * it is resized upward.
+ * </p>
+ *
+ * <pre>
+ * <code>Hashtable(int size, float fillRatio)</code>
+ * </pre>
+ * <p>
+ * The fourth version creates a hash table that is initialized with the elements in m.
+ * </p>
+ * <p>
+ * The capacity of the hash table is set to twice the number of elements in m. The default load
+ * factor of 0.75 is used.
+ * </p>
+ *
+ * <pre>
+ * <code>Hashtable(Map m)</code>
+ * </pre>
  *
  * <h2>The Properties</h2>
  * <p>
