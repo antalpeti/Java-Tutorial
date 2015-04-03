@@ -84,6 +84,67 @@
  * <tbody>
  * <tr>
  * <th>SN</th>
+ * <th>Interfaces with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>The Collection Interface</b><br>
+ * This enables you to work with groups of objects; it is at the top of the collections hierarchy.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>The List Interface</b><br>
+ * This extends <b>Collection</b> and an instance of List stores an ordered collection of elements.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>The Set</b><br>
+ * This extends Collection to handle sets, which must contain unique elements</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>The SortedSet</b><br>
+ * This extends Set to handle sorted sets</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>The Map</b><br>
+ * This maps unique keys to values.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>The Map.Entry</b><br>
+ * This describes an element (a key/value pair) in a map. This is an inner class of Map.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>The SortedMap</b><br>
+ * This extends Map so that the keys are maintained in ascending order.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>The Enumeration</b><br>
+ * This is legacy interface and defines the methods by which you can enumerate (obtain one at a
+ * time) the elements in a collection of objects. This legacy interface has been superceded by
+ * Iterator.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h2>The Collection Classes:</h2>
+ * <p>
+ * Java provides a set of standard collection classes that implement Collection interfaces. Some of
+ * the classes provide full implementations that can be used as-is and others are abstract class,
+ * providing skeletal implementations that are used as starting points for creating concrete
+ * collections.
+ * </p>
+ * <p>
+ * The standard collection classes are summarized in the following table:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
  * <th>Classes with Description</th>
  * </tr>
  * <tr>
@@ -164,5 +225,7 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ *
  */
 package tutorialspoint.collections;
