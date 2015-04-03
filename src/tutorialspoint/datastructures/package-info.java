@@ -267,5 +267,29 @@
  * The Properties class is used by many other Java classes. For example, it is the type of object
  * returned by System.getProperties( ) when obtaining environmental values.
  * </p>
+ * <p>
+ * Properties define the following instance variable. This variable holds a default property list
+ * associated with a Properties object.
+ * </p>
+ *
+ * <pre>
+ * <code>Properties defaults;</code>
+ * </pre>
+ * <p>
+ * The Properties define two constructors. The first version creates a Properties object that has no
+ * default values:
+ * </p>
+ *
+ * <pre>
+ * <code>Properties( )</code>
+ * </pre>
+ * <p>
+ * The second creates an object that uses propDefault for its default values. In both cases, the
+ * property list is empty:
+ * </p>
+ *
+ * <pre>
+ * <code>Properties(Properties propDefault)</code>
+ * </pre>
  */
 package tutorialspoint.datastructures;
