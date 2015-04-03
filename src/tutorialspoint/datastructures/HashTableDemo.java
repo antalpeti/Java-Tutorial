@@ -28,7 +28,8 @@ public class HashTableDemo {
     System.out.println();
     // Deposit 1,000 into Zara's account
     bal = balance.get("Zara").doubleValue();
-    balance.put("Zara", new Double(bal + 1000));
+    Double old = balance.put("Zara", new Double(bal + 1000));
+    System.out.println("Zara's old balance: " + old);
     System.out.println("Zara's new balance: " + balance.get("Zara"));
 
     Object clone = balance.clone();
