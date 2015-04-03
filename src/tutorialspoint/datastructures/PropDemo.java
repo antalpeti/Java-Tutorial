@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class PropDemo {
 
+  @SuppressWarnings("rawtypes")
   public static void main(String args[]) {
     Properties capitals = new Properties();
     Set states;
