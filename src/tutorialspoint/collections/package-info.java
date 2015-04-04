@@ -332,6 +332,68 @@
  * </tbody>
  * </table>
  *
+ * <h3>The Set Interface</h3>
+ *
+ * <p>
+ * A Set is a Collection that cannot contain duplicate elements. It models the mathematical set
+ * abstraction.
+ * </p>
+ * <p>
+ * The Set interface contains only methods inherited from Collection and adds the restriction that
+ * duplicate elements are prohibited.
+ * </p>
+ * <p>
+ * Set also adds a stronger contract on the behavior of the equals and hashCode operations, allowing
+ * Set instances to be compared meaningfully even if their implementation types differ.
+ * </p>
+ * <p>
+ * The methods declared by Set are summarized in the following table:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>add( )</b><br>
+ * Adds an object to the collection</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>clear( )</b><br>
+ * Removes all objects from the collection</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>contains( )</b><br>
+ * Returns true if a specified object is an element within the collection</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>isEmpty( )</b><br>
+ * Returns true if the collection has no elements</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>iterator( )</b><br>
+ * Returns an Iterator object for the collection which may be used to retrieve an object</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>remove( )</b><br>
+ * Removes a specified object from the collection</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b> size( )</b><br>
+ * Returns the number of elements in the collection</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
  * <h2>The Collection Classes:</h2>
  * <p>
  * Java provides a set of standard collection classes that implement Collection interfaces. Some of
