@@ -131,7 +131,7 @@
  * </tbody>
  * </table>
  *
- * <h3>Java - The Collection Interface</h3>
+ * <h3>The Collection Interface</h3>
  *
  * <p>
  * The Collection interface is the foundation upon which the collections framework is built. It
@@ -231,6 +231,103 @@
  * <td>15</td>
  * <td><b>Object[ ] toArray(Object array[ ])</b><br>
  * Returns an array containing only those collection elements whose type matches that of array.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The List Interface</h3>
+ *
+ * <p>
+ * The List interface extends <b>Collection</b> and declares the behavior of a collection that
+ * stores a sequence of elements.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Elements can be inserted or accessed by their position in the list, using a zero-based index.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A list may contain duplicate elements.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * In addition to the methods defined by <b>Collection</b>, List defines some of its own, which are
+ * summarized in the following below Table.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Several of the list methods will throw an UnsupportedOperationException if the collection cannot
+ * be modified, and a ClassCastException is generated when one object is incompatible with another.
+ * </p>
+ * </li>
+ * </ul>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void add(int index, Object obj)</b><br>
+ * Inserts obj into the invoking list at the index passed in index. Any pre-existing elements at or
+ * beyond the point of insertion are shifted up. Thus, no elements are overwritten.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean addAll(int index, Collection c)</b><br>
+ * Inserts all elements of c into the invoking list at the index passed in index. Any pre-existing
+ * elements at or beyond the point of insertion are shifted up. Thus, no elements are overwritten.
+ * Returns true if the invoking list changes and returns false otherwise.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>Object get(int index)</b><br>
+ * Returns the object stored at the specified index within the invoking collection.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>int indexOf(Object obj)</b><br>
+ * Returns the index of the first instance of obj in the invoking list. If obj is not an element of
+ * the list, .1 is returned.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>int lastIndexOf(Object obj)</b><br>
+ * Returns the index of the last instance of obj in the invoking list. If obj is not an element of
+ * the list, .1 is returned.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>ListIterator listIterator( )</b><br>
+ * Returns an iterator to the start of the invoking list.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>ListIterator listIterator(int index)</b><br>
+ * Returns an iterator to the invoking list that begins at the specified index.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>Object remove(int index)</b><br>
+ * Removes the element at position index from the invoking list and returns the deleted element. The
+ * resulting list is compacted. That is, the indexes of subsequent elements are decremented by one</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>Object set(int index, Object obj)</b><br>
+ * Assigns obj to the location specified by index within the invoking list.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>List subList(int start, int end)</b><br>
+ * Returns a list that includes elements from start to end.1 in the invoking list. Elements in the
+ * returned list are also referenced by the invoking object.</td>
  * </tr>
  * </tbody>
  * </table>
