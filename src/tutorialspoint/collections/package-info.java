@@ -131,6 +131,110 @@
  * </tbody>
  * </table>
  *
+ * <h3>Java - The Collection Interface</h3>
+ *
+ * <p>
+ * The Collection interface is the foundation upon which the collections framework is built. It
+ * declares the core methods that all collections will have. These methods are summarized in the
+ * following table.
+ * </p>
+ * <p>
+ * Because all collections implement Collection, familiarity with its methods is necessary for a
+ * clear understanding of the framework. Several of these methods can throw an
+ * <b>UnsupportedOperationException</b>.
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>boolean add(Object obj)</b><br>
+ * Adds obj to the invoking collection. Returns true if obj was added to the collection. Returns
+ * false if obj is already a member of the collection, or if the collection does not allow
+ * duplicates.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean addAll(Collection c)</b><br>
+ * Adds all the elements of c to the invoking collection. Returns true if the operation succeeded
+ * (i.e., the elements were added). Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>void clear( )</b><br>
+ * Removes all elements from the invoking collection.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean contains(Object obj)</b><br>
+ * Returns true if obj is an element of the invoking collection. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>boolean containsAll(Collection c)</b><br>
+ * Returns true if the invoking collection contains all elements of c. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>boolean equals(Object obj)</b><br>
+ * Returns true if the invoking collection and obj are equal. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>int hashCode( )</b><br>
+ * Returns the hash code for the invoking collection.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>boolean isEmpty( )</b><br>
+ * Returns true if the invoking collection is empty. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>Iterator iterator( )</b><br>
+ * Returns an iterator for the invoking collection.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>boolean remove(Object obj)</b><br>
+ * Removes one instance of obj from the invoking collection. Returns true if the element was
+ * removed. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>boolean removeAll(Collection c)</b><br>
+ * Removes all elements of c from the invoking collection. Returns true if the collection changed
+ * (i.e., elements were removed). Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>boolean retainAll(Collection c)</b><br>
+ * Removes all elements from the invoking collection except those in c. Returns true if the
+ * collection changed (i.e., elements were removed). Otherwise, returns false</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>int size( )</b><br>
+ * Returns the number of elements held in the invoking collection.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>Object[ ] toArray( )</b><br>
+ * Returns an array that contains all the elements stored in the invoking collection. The array
+ * elements are copies of the collection elements.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>Object[ ] toArray(Object array[ ])</b><br>
+ * Returns an array containing only those collection elements whose type matches that of array.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
  * <h2>The Collection Classes:</h2>
  * <p>
  * Java provides a set of standard collection classes that implement Collection interfaces. Some of
@@ -225,7 +329,6 @@
  * </tr>
  * </tbody>
  * </table>
- *
  *
  */
 package tutorialspoint.collections;
