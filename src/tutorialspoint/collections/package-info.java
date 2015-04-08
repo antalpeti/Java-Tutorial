@@ -394,6 +394,328 @@
  * </tbody>
  * </table>
  *
+ * <h3>The SortedSet Interface</h3>
+ *
+ * <p>
+ * The SortedSet interface extends Set and declares the behavior of a set sorted in ascending order.
+ * In addition to those methods defined by Set, the SortedSet interface declares the methods
+ * summarized in below Table:
+ * </p>
+ * <p>
+ * Several methods throw a NoSuchElementException when no items are contained in the invoking set. A
+ * ClassCastException is thrown when an object is incompatible with the elements in a set.
+ * </p>
+ * <p>
+ * A NullPointerException is thrown if an attempt is made to use a null object and null is not
+ * allowed in the set.
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>Comparator comparator( )</b><br>
+ * Returns the invoking sorted set's comparator. If the natural ordering is used for this set, null
+ * is returned.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object first( )</b><br>
+ * Returns the first element in the invoking sorted set.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>SortedSet headSet(Object end)</b><br>
+ * Returns a SortedSet containing those elements less than end that are contained in the invoking
+ * sorted set. Elements in the returned sorted set are also referenced by the invoking sorted set.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Object last( )</b><br>
+ * Returns the last element in the invoking sorted set.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>SortedSet subSet(Object start, Object end)</b><br>
+ * Returns a SortedSet that includes those elements between start and end.1. Elements in the
+ * returned collection are also referenced by the invoking object.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>SortedSet tailSet(Object start)</b><br>
+ * Returns a SortedSet that contains those elements greater than or equal to start that are
+ * contained in the sorted set. Elements in the returned set are also referenced by the invoking
+ * object.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The Map Interface</h3>
+ *
+ * <p>
+ * The Map interface maps unique keys to values. A key is an object that you use to retrieve a value
+ * at a later date.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Given a key and a value, you can store the value in a Map object. After the value is stored, you
+ * can retrieve it by using its key.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Several methods throw a NoSuchElementException when no items exist in the invoking map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A ClassCastException is thrown when an object is incompatible with the elements in a map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A NullPointerException is thrown if an attempt is made to use a null object and null is not
+ * allowed in the map.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * An UnsupportedOperationException is thrown when an attempt is made to change an unmodifiable map.
+ * </p>
+ * </li>
+ * </ul>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear( )</b><br>
+ * Removes all key/value pairs from the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean containsKey(Object k)</b><br>
+ * Returns true if the invoking map contains k as a key. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean containsValue(Object v)</b><br>
+ * Returns true if the map contains v as a value. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Set entrySet( )</b><br>
+ * Returns a Set that contains the entries in the map. The set contains objects of type Map.Entry.
+ * This method provides a set-view of the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>boolean equals(Object obj)</b><br>
+ * Returns true if obj is a Map and contains the same entries. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Object get(Object k)</b><br>
+ * Returns the value associated with the key k.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>int hashCode( )</b><br>
+ * Returns the hash code for the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>boolean isEmpty( )</b><br>
+ * Returns true if the invoking map is empty. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>Set keySet( )</b><br>
+ * Returns a Set that contains the keys in the invoking map. This method provides a set-view of the
+ * keys in the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Object put(Object k, Object v)</b><br>
+ * Puts an entry in the invoking map, overwriting any previous value associated with the key. The
+ * key and value are k and v, respectively. Returns null if the key did not already exist.
+ * Otherwise, the previous value linked to the key is returned.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>void putAll(Map m)</b><br>
+ * Puts all the entries from m into this map.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>Object remove(Object k)</b><br>
+ * Removes the entry whose key equals k.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>int size( )</b><br>
+ * Returns the number of key/value pairs in the map.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>Collection values( )</b><br>
+ * Returns a collection containing the values in the map. This method provides a collection-view of
+ * the values in the map.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The Map.Entry Interface</h3>
+ *
+ * <p>
+ * The Map.Entry interface enables you to work with a map entry.
+ * </p>
+ * <p>
+ * The <b>entrySet( )</b> method declared by the Map interface returns a Set containing the map
+ * entries. Each of these set elements is a Map.Entry object.
+ * </p>
+ * <p>
+ * Following table summarizes the methods declared by this interface:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>boolean equals(Object obj)</b><br>
+ * Returns true if obj is a Map.Entry whose key and value are equal to that of the invoking object.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object getKey( )</b><br>
+ * Returns the key for this map entry.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>Object getValue( )</b><br>
+ * Returns the value for this map entry.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>int hashCode( )</b><br>
+ * Returns the hash code for this map entry.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>Object setValue(Object v)</b><br>
+ * Sets the value for this map entry to v. A ClassCastException is thrown if v is not the correct
+ * type for the map. A NullPointerException is thrown if v is null and the map does not permit null
+ * keys. An UnsupportedOperationException is thrown if the map cannot be changed.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The SortedMap Interface</h3>
+ *
+ * <p>
+ * The SortedMap interface extends Map. It ensures that the entries are maintained in ascending key
+ * order
+ * </p>
+ * <p>
+ * Several methods throw a NoSuchElementException when no items are in the invoking map. A
+ * ClassCastException is thrown when an object is incompatible with the elements in a map. A
+ * NullPointerException is thrown if an attempt is made to use a null object when null is not
+ * allowed in the map.
+ * </p>
+ * <p>
+ * The methods declared by SortedMap are summarized in the following table:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>Comparator comparator( )</b><br>
+ * Returns the invoking sorted map's comparator. If the natural ordering is used for the invoking
+ * map, null is returned.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object firstKey( )</b><br>
+ * Returns the first key in the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>SortedMap headMap(Object end)</b><br>
+ * Returns a sorted map for those map entries with keys that are less than end.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Object lastKey( )</b><br>
+ * Returns the last key in the invoking map.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>SortedMap subMap(Object start, Object end)</b><br>
+ * Returns a map containing those entries with keys that are greater than or equal to start and less
+ * than end</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>SortedMap tailMap(Object start)</b><br>
+ * Returns a map containing those entries with keys that are greater than or equal to start.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The Enumeration Interface</h3>
+ *
+ * <p>
+ * The Enumeration interface defines the methods by which you can enumerate (obtain one at a time)
+ * the elements in a collection of objects.
+ * </p>
+ * <p>
+ * This legacy interface has been superceded by Iterator. Although not deprecated, Enumeration is
+ * considered obsolete for new code. However, it is used by several methods defined by the legacy
+ * classes such as Vector and Properties, is used by several other API classes, and is currently in
+ * widespread use in application code.
+ * </p>
+ * <p>
+ * The methods declared by Enumeration are summarized in the following table:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>boolean hasMoreElements( )</b><br>
+ * When implemented, it must return true while there are still more elements to extract, and false
+ * when all the elements have been enumerated.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object nextElement( )</b><br>
+ * This returns the next object in the enumeration as a generic Object reference.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
  * <h2>The Collection Classes:</h2>
  * <p>
  * Java provides a set of standard collection classes that implement Collection interfaces. Some of
