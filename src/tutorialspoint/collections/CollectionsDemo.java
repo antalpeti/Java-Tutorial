@@ -2,12 +2,14 @@ package tutorialspoint.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class CollectionsDemo {
@@ -77,5 +79,22 @@ public class CollectionsDemo {
     System.out.println();
     System.out.println("\n Map Elements");
     System.out.print("\t" + m1);
+    Set<Entry<String, String>> es1 = m1.entrySet();
+    for (Entry<String, String> entry : es1) {
+      System.out.println("key: " + entry.getKey() + "\tvalue: " + entry.getValue());
+    }
+    System.out.println("isEmpty: " + m1.isEmpty());
+    Set<String> ks = m1.keySet();
+    for (Object object : ks) {
+      System.out.println("key: " + object);
+    }
+    Collection<String> vs = m1.values();
+    for (String string : vs) {
+      System.out.println("value: " + string);
+    }
+    System.out.println("size: " + m1.size());
+    m1.clear();
+    System.out.println("size after clear: " + m1.size());
+    System.out.println("isEmpty after clear: " + m1.isEmpty());
   }
 }
