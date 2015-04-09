@@ -980,5 +980,165 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h3>The ArrayList Class</h3>
+ *
+ * <p>
+ * The ArrayList class extends AbstractList and implements the List interface. ArrayList supports
+ * dynamic arrays that can grow as needed.
+ * </p>
+ * <p>
+ * Standard Java arrays are of a fixed length. After arrays are created, they cannot grow or shrink,
+ * which means that you must know in advance how many elements an array will hold.
+ * </p>
+ * <p>
+ * Array lists are created with an initial size. When this size is exceeded, the collection is
+ * automatically enlarged. When objects are removed, the array may be shrunk.
+ * </p>
+ * <p>
+ * The ArrayList class supports three constructors. The first constructor builds an empty array
+ * list.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">ArrayList</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor builds an array list that is initialized with the elements of the
+ * collection c.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">ArrayList</span><span class="pun">(</span><span class="typ">Collection</span><span class="pln"> c</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor builds an array list that has the specified initial capacity. The
+ * capacity is the size of the underlying array that is used to store the elements.
+ * </p>
+ * <p>
+ * The capacity grows automatically as elements are added to an array list.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">ArrayList</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, ArrayList defines following methods:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void add(int index, Object element)</b><br>
+ * Inserts the specified element at the specified position index in this list. Throws
+ * IndexOutOfBoundsException if the specified index is is out of range (index &lt; 0 || index &gt;
+ * size()).</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean add(Object o) </b><br>
+ * Appends the specified element to the end of this list.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean addAll(Collection c)</b><br>
+ * Appends all of the elements in the specified collection to the end of this list, in the order
+ * that they are returned by the specified collection's iterator. Throws NullPointerException if the
+ * specified collection is null.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean addAll(int index, Collection c) </b><br>
+ * Inserts all of the elements in the specified collection into this list, starting at the specified
+ * position. Throws NullPointerException if the specified collection is null.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>void clear() </b><br>
+ * Removes all of the elements from this list.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Object clone() </b><br>
+ * Returns a shallow copy of this ArrayList.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>boolean contains(Object o) </b><br>
+ * Returns true if this list contains the specified element. More formally, returns true if and only
+ * if this list contains at least one element e such that (o==null ? e==null : o.equals(e)).</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>void ensureCapacity(int minCapacity) </b><br>
+ * Increases the capacity of this ArrayList instance, if necessary, to ensure that it can hold at
+ * least the number of elements specified by the minimum capacity argument.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>Object get(int index) </b><br>
+ * Returns the element at the specified position in this list. Throws IndexOutOfBoundsException if
+ * the specified index is is out of range (index &lt; 0 || index &gt;= size()).</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>int indexOf(Object o) </b><br>
+ * Returns the index in this list of the first occurrence of the specified element, or -1 if the
+ * List does not contain this element.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>int lastIndexOf(Object o)</b><br>
+ * Returns the index in this list of the last occurrence of the specified element, or -1 if the list
+ * does not contain this element.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>Object remove(int index) </b><br>
+ * Removes the element at the specified position in this list. Throws IndexOutOfBoundsException if
+ * index out of range (index &lt; 0 || index &gt;= size()).</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>protected void removeRange(int fromIndex, int toIndex) </b><br>
+ * Removes from this List all of the elements whose index is between fromIndex, inclusive and
+ * toIndex, exclusive.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>Object set(int index, Object element) </b><br>
+ * Replaces the element at the specified position in this list with the specified element. Throws
+ * IndexOutOfBoundsException if the specified index is is out of range (index &lt; 0 || index &gt;=
+ * size()).</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of elements in this list.</td>
+ * </tr>
+ * <tr>
+ * <td>16</td>
+ * <td><b>Object[] toArray() </b><br>
+ * Returns an array containing all of the elements in this list in the correct order. Throws
+ * NullPointerException if the specified array is null.</td>
+ * </tr>
+ * <tr>
+ * <td>17</td>
+ * <td><b>Object[] toArray(Object[] a) </b><br>
+ * Returns an array containing all of the elements in this list in the correct order; the runtime
+ * type of the returned array is that of the specified array.</td>
+ * </tr>
+ * <tr>
+ * <td>18</td>
+ * <td><b>void trimToSize() </b><br>
+ * Trims the capacity of this ArrayList instance to be the list's current size.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
