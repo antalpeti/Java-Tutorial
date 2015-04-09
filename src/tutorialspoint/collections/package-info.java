@@ -811,5 +811,174 @@
  * </tbody>
  * </table>
  *
+ * <h3>The LinkedList Class</h3>
+ *
+ * <p>
+ * The LinkedList class extends AbstractSequentialList and implements the List interface. It
+ * provides a linked-list data structure.
+ * </p>
+ * <p>
+ * The LinkedList class supports two constructors. The first constructor builds an empty linked
+ * list:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedList</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor builds a linked list that is initialized with the elements of the
+ * collection c.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedList</span><span class="pun">(</span><span class="typ">Collection</span><span class="pln"> c</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, LinkedList defines following methods:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void add(int index, Object element)</b><br>
+ * Inserts the specified element at the specified position index in this list. Throws
+ * IndexOutOfBoundsException if the specified index is is out of range (index &lt; 0 || index &gt;
+ * size()).</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean add(Object o) </b><br>
+ * Appends the specified element to the end of this list.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean addAll(Collection c)</b><br>
+ * Appends all of the elements in the specified collection to the end of this list, in the order
+ * that they are returned by the specified collection's iterator. Throws NullPointerException if the
+ * specified collection is null.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean addAll(int index, Collection c) </b><br>
+ * Inserts all of the elements in the specified collection into this list, starting at the specified
+ * position. Throws NullPointerException if the specified collection is null.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>void addFirst(Object o)</b><br>
+ * Inserts the given element at the beginning of this list.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>void addLast(Object o) </b><br>
+ * Appends the given element to the end of this list.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>void clear() </b><br>
+ * Removes all of the elements from this list.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>Object clone() </b><br>
+ * Returns a shallow copy of this LinkedList.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>boolean contains(Object o) </b><br>
+ * Returns true if this list contains the specified element. More formally, returns true if and only
+ * if this list contains at least one element e such that (o==null ? e==null : o.equals(e)).</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Object get(int index) </b><br>
+ * Returns the element at the specified position in this list. Throws IndexOutOfBoundsException if
+ * the specified index is is out of range (index &lt; 0 || index &gt;= size()).</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>Object getFirst() </b><br>
+ * Returns the first element in this list. Throws NoSuchElementException if this list is empty.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>Object getLast() </b><br>
+ * Returns the last element in this list. Throws NoSuchElementException if this list is empty.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>int indexOf(Object o) </b><br>
+ * Returns the index in this list of the first occurrence of the specified element, or -1 if the
+ * List does not contain this element.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>int lastIndexOf(Object o)</b><br>
+ * Returns the index in this list of the last occurrence of the specified element, or -1 if the list
+ * does not contain this element.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>ListIterator listIterator(int index)</b><br>
+ * Returns a list-iterator of the elements in this list (in proper sequence), starting at the
+ * specified position in the list. Throws IndexOutOfBoundsException if the specified index is is out
+ * of range (index &lt; 0 || index &gt;= size()).</td>
+ * </tr>
+ * <tr>
+ * <td>16</td>
+ * <td><b>Object remove(int index) </b><br>
+ * Removes the element at the specified position in this list. Throws NoSuchElementException if this
+ * list is empty.</td>
+ * </tr>
+ * <tr>
+ * <td>17</td>
+ * <td><b>boolean remove(Object o) </b><br>
+ * Removes the first occurrence of the specified element in this list. Throws NoSuchElementException
+ * if this list is empty. Throws IndexOutOfBoundsException if the specified index is is out of range
+ * (index &lt; 0 || index &gt;= size()).</td>
+ * </tr>
+ * <tr>
+ * <td>18</td>
+ * <td><b>Object removeFirst() </b><br>
+ * Removes and returns the first element from this list. Throws NoSuchElementException if this list
+ * is empty.</td>
+ * </tr>
+ * <tr>
+ * <td>19</td>
+ * <td><b>Object removeLast() </b><br>
+ * Removes and returns the last element from this list. Throws NoSuchElementException if this list
+ * is empty.</td>
+ * </tr>
+ * <tr>
+ * <td>20</td>
+ * <td><b>Object set(int index, Object element) </b><br>
+ * Replaces the element at the specified position in this list with the specified element. Throws
+ * IndexOutOfBoundsException if the specified index is is out of range (index &lt; 0 || index &gt;=
+ * size()).</td>
+ * </tr>
+ * <tr>
+ * <td>21</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of elements in this list.</td>
+ * </tr>
+ * <tr>
+ * <td>22</td>
+ * <td><b>Object[] toArray() </b><br>
+ * Returns an array containing all of the elements in this list in the correct order. Throws
+ * NullPointerException if the specified array is null.</td>
+ * </tr>
+ * <tr>
+ * <td>23</td>
+ * <td><b>Object[] toArray(Object[] a) </b><br>
+ * Returns an array containing all of the elements in this list in the correct order; the runtime
+ * type of the returned array is that of the specified array.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
