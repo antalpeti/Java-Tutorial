@@ -1244,5 +1244,51 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h3>The LinkedHashSet Class</h3>
+ *
+ * <p>
+ * This class extends HashSet, but adds no members of its own.
+ * </p>
+ * <p>
+ * LinkedHashSet maintains a linked list of the entries in the set, in the order in which they were
+ * inserted. This allows insertion-order iteration over the set.
+ * </p>
+ * <p>
+ * That is, when cycling through a LinkedHashSet using an iterator, the elements will be returned in
+ * the order in which they were inserted.
+ * </p>
+ * <p>
+ * The hash code is then used as the index at which the data associated with the key is stored. The
+ * transformation of the key into its hash code is performed automatically.
+ * </p>
+ * <p>
+ * The LinkedHashSet class supports four constructors. The first form constructs a default hash set:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashSet</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor form initializes the hash set by using the elements of c.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashSet</span><span class="pun">(</span><span class="typ">Collection</span><span class="pln"> c</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor form initializes the capacity of the hash set to capacity.
+ * </p>
+ * <p>
+ * The capacity grows automatically as elements are added to the Hash.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashSet</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The fourth form initializes both the capacity and the fill ratio (also called load capacity) of
+ * the hash set from its arguments:
+ * </p>
  */
 package tutorialspoint.collections;
