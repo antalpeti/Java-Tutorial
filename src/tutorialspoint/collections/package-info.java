@@ -1290,5 +1290,136 @@
  * The fourth form initializes both the capacity and the fill ratio (also called load capacity) of
  * the hash set from its arguments:
  * </p>
+ *
+ * <h3>The TreeSet Class</h3>
+ *
+ * <p>
+ * TreeSet provides an implementation of the Set interface that uses a tree for storage. Objects are
+ * stored in sorted, ascending order.
+ * </p>
+ * <p>
+ * Access and retrieval times are quite fast, which makes TreeSet an excellent choice when storing
+ * large amounts of sorted information that must be found quickly.
+ * </p>
+ * <p>
+ * The TreeSet class supports four constructors. The first form constructs an empty tree set that
+ * will be sorted in ascending order according to the natural order of its elements:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeSet</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The second form builds a tree set that contains the elements of c.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeSet</span><span class="pun">(</span><span class="typ">Collection</span><span class="pln"> c</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The third form constructs an empty tree set that will be sorted according to the comparator
+ * specified by comp.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeSet</span><span class="pun">(</span><span class="typ">Comparator</span><span class="pln"> comp</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The fourth form builds a tree set that contains the elements of ss:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeSet</span><span class="pun">(</span><span class="typ">SortedSet</span><span class="pln"> ss</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, TreeSet defines the following methods:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void add(Object o)</b><br>
+ * Adds the specified element to this set if it is not already present.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean addAll(Collection c) </b><br>
+ * Adds all of the elements in the specified collection to this set.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>void clear() </b><br>
+ * Removes all of the elements from this set.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Object clone()</b><br>
+ * Returns a shallow copy of this TreeSet instance.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>Comparator comparator()</b><br>
+ * Returns the comparator used to order this sorted set, or null if this tree set uses its elements
+ * natural ordering.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>boolean contains(Object o) </b><br>
+ * Returns true if this set contains the specified element.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>Object first() </b><br>
+ * Returns the first (lowest) element currently in this sorted set.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>SortedSet headSet(Object toElement)</b><br>
+ * Returns a view of the portion of this set whose elements are strictly less than toElement.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>boolean isEmpty() </b><br>
+ * Returns true if this set contains no elements.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Iterator iterator() </b><br>
+ * Returns an iterator over the elements in this set.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>Object last() </b><br>
+ * Returns the last (highest) element currently in this sorted set.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>boolean remove(Object o) </b><br>
+ * Removes the specified element from this set if it is present.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of elements in this set (its cardinality).</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>SortedSet subSet(Object fromElement, Object toElement) </b><br>
+ * Returns a view of the portion of this set whose elements range from fromElement, inclusive, to
+ * toElement, exclusive.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>SortedSet tailSet(Object fromElement) </b><br>
+ * Returns a view of the portion of this set whose elements are greater than or equal to
+ * fromElement.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
