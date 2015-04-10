@@ -1140,5 +1140,109 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h3>The HashSet Class</h3>
+ *
+ * <p>
+ * HashSet extends AbstractSet and implements the Set interface. It creates a collection that uses a
+ * hash table for storage.
+ * </p>
+ * <p>
+ * A hash table stores information by using a mechanism called hashing. In hashing, the
+ * informational content of a key is used to determine a unique value, called its hash code.
+ * </p>
+ * <p>
+ * The hash code is then used as the index at which the data associated with the key is stored. The
+ * transformation of the key into its hash code is performed automatically.
+ * </p>
+ * <p>
+ * The HashSet class supports four constructors. The first form constructs a default hash set:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashSet</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor form initializes the hash set by using the elements of c.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashSet</span><span class="pun">(</span><span class="typ">Collection</span><span class="pln"> c</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The following constructor form initializes the capacity of the hash set to capacity.
+ * </p>
+ * <p>
+ * The capacity grows automatically as elements are added to the Hash.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashSet</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The fourth form initializes both the capacity and the fill ratio (also called load capacity) of
+ * the hash set from its arguments:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashSet</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> fillRatio</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Here the fill ratio must be between 0.0 and 1.0, and it determines how full the hash set can be
+ * before it is resized upward. Specifically, when the number of elements is greater than the
+ * capacity of the hash set multiplied by its fill ratio, the hash set is expanded.
+ * </p>
+ * <p>
+ * Apart from the methods inherited from its parent classes, HashSet defines following methods:
+ * </p>
+ *
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>boolean add(Object o) </b><br>
+ * Adds the specified element to this set if it is not already present.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>void clear() </b><br>
+ * Removes all of the elements from this set.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>Object clone() </b><br>
+ * Returns a shallow copy of this HashSet instance: the elements themselves are not cloned.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean contains(Object o)</b><br>
+ * Returns true if this set contains the specified element</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>boolean isEmpty() </b><br>
+ * Returns true if this set contains no elements.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Iterator iterator() </b><br>
+ * Returns an iterator over the elements in this set.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>boolean remove(Object o) </b><br>
+ * Removes the specified element from this set if it is present.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of elements in this set (its cardinality).</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
