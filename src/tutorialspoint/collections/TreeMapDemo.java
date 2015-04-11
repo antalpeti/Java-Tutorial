@@ -38,5 +38,6 @@ public class TreeMapDemo {
     System.out.println("lastKey: " + tm.lastKey());
     System.out.println("subMap: " + tm.subMap("Daisy", "Quadir"));
     System.out.println("tailMap: " + tm.tailMap("Mahnaz"));
+    System.out.println(tm);
   }
 }
