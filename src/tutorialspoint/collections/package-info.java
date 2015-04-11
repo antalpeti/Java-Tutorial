@@ -1421,5 +1421,116 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h3>The HashMap Class</h3>
+ *
+ * <p>
+ * The HashMap class uses a hashtable to implement the Map interface. This allows the execution time
+ * of basic operations, such as get( ) and put( ), to remain constant even for large sets.
+ * </p>
+ * <p>
+ * The HashMap class supports four constructors. The first form constructs a default hash map:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashMap</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The second form initializes the hash map by using the elements of m:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pln"> m</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The third form initializes the capacity of the hash map to capacity:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The fourth form initializes both the capacity and fill ratio of the hash map by using its
+ * arguments:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">HashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> fillRatio</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, HashMap defines the following methods:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear() </b><br>
+ * Removes all mappings from this map.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object clone() </b><br>
+ * Returns a shallow copy of this HashMap instance: the keys and values themselves are not cloned.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean containsKey(Object key) </b><br>
+ * Returns true if this map contains a mapping for the specified key.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean containsValue(Object value) </b><br>
+ * Returns true if this map maps one or more keys to the specified value.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>Set entrySet() </b><br>
+ * Returns a collection view of the mappings contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Object get(Object key) </b><br>
+ * Returns the value to which the specified key is mapped in this identity hash map, or null if the
+ * map contains no mapping for this key.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>boolean isEmpty()</b><br>
+ * Returns true if this map contains no key-value mappings.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>Set keySet() </b><br>
+ * Returns a set view of the keys contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>Object put(Object key, Object value)</b><br>
+ * Associates the specified value with the specified key in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>putAll(Map m) </b><br>
+ * Copies all of the mappings from the specified map to this map These mappings will replace any
+ * mappings that this map had for any of the keys currently in the specified map.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>Object remove(Object key) </b><br>
+ * Removes the mapping for this key from this map if present.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of key-value mappings in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>Collection values() </b><br>
+ * Returns a collection view of the values contained in this map.</td>
  */
 package tutorialspoint.collections;
