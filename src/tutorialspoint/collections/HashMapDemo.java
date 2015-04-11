@@ -36,5 +36,6 @@ public class HashMapDemo {
     hm.put("Zara", new Double(balance + 1000));
     System.out.println("Zara's new balance: " + hm.get("Zara"));
     System.out.println("Ayan's new balance: " + hm.get("Ayan"));
+    System.out.println(hm);
   }
 }
