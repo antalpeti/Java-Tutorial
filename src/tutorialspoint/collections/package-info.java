@@ -1532,5 +1532,157 @@
  * <td>13</td>
  * <td><b>Collection values() </b><br>
  * Returns a collection view of the values contained in this map.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h3>The TreeMap Class</h3>
+ *
+ * <p>
+ * The TreeMap class implements the Map interface by using a tree. A TreeMap provides an efficient
+ * means of storing key/value pairs in sorted order, and allows rapid retrieval.
+ * </p>
+ * <p>
+ * You should note that, unlike a hash map, a tree map guarantees that its elements will be sorted
+ * in ascending key order.
+ * </p>
+ * <p>
+ * The TreeMap class supports four constructors. The first form constructs an empty tree map that
+ * will be sorted by using the natural order of its keys:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeMap</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ *
+ * <p>
+ * The second form constructs an empty tree-based map that will be sorted by using the Comparator
+ * comp:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeMap</span><span class="pun">(</span><span class="typ">Comparator</span><span class="pln"> comp</span><span class="pun">)</span>
+ * </pre>
+ *
+ * <p>
+ * The third form initializes a tree map with the entries from m, which will be sorted by using the
+ * natural order of the keys:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pln"> m</span><span class="pun">)</span>
+ * </pre>
+ *
+ * <p>
+ * The fourth form initializes a tree map with the entries from sm, which will be sorted in the same
+ * order as sm:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">TreeMap</span><span class="pun">(</span><span class="typ">SortedMap</span><span class="pln"> sm</span><span class="pun">)</span>
+ * </pre>
+ *
+ * <p>
+ * Apart from the methods inherited from its parent classes, TreeMap defines following methods:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear()</b><br>
+ * Removes all mappings from this TreeMap.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object clone()</b><br>
+ * Returns a shallow copy of this TreeMap instance.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>Comparator comparator()</b><br>
+ * Returns the comparator used to order this map, or null if this map uses its keys' natural order.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean containsKey(Object key)</b><br>
+ * Returns true if this map contains a mapping for the specified key.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>boolean containsValue(Object value) </b><br>
+ * Returns true if this map maps one or more keys to the specified value.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Set entrySet() </b><br>
+ * Returns a set view of the mappings contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>Object firstKey() </b><br>
+ * Returns the first (lowest) key currently in this sorted map.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>Object get(Object key) </b><br>
+ * Returns the value to which this map maps the specified key.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>SortedMap headMap(Object toKey) </b><br>
+ * Returns a view of the portion of this map whose keys are strictly less than toKey.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Set keySet()</b><br>
+ * Returns a Set view of the keys contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>Object lastKey() </b><br>
+ * Returns the last (highest) key currently in this sorted map.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>Object put(Object key, Object value) </b><br>
+ * Associates the specified value with the specified key in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>void putAll(Map map) </b><br>
+ * Copies all of the mappings from the specified map to this map.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>Object remove(Object key) </b><br>
+ * Removes the mapping for this key from this TreeMap if present.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of key-value mappings in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>16</td>
+ * <td><b>SortedMap subMap(Object fromKey, Object toKey) </b><br>
+ * Returns a view of the portion of this map whose keys range from fromKey, inclusive, to toKey,
+ * exclusive.</td>
+ * </tr>
+ * <tr>
+ * <td>17</td>
+ * <td><b>SortedMap tailMap(Object fromKey) </b><br>
+ * Returns a view of the portion of this map whose keys are greater than or equal to fromKey.</td>
+ * </tr>
+ * <tr>
+ * <td>18</td>
+ * <td><b>Collection values() </b><br>
+ * Returns a collection view of the values contained in this map.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
