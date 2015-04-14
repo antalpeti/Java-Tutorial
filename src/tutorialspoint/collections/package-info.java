@@ -1684,5 +1684,132 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>The WeakHashMap Class</h2>
+ *
+ * <p>
+ * WeakHashMap is an implementation of the Map interface that stores only weak references to its
+ * keys. Storing only weak references allows a key-value pair to be garbagecollected when its key is
+ * no longer referenced outside of the WeakHashMap.
+ * </p>
+ * <p>
+ * This class provides the easiest way to harness the power of weak references. It is useful for
+ * implementing "registry-like" data structures, where the utility of an entry vanishes when its key
+ * is no longer reachable by any thread.
+ * </p>
+ * <p>
+ * The WeakHashMap functions identically to the HashMap with one very important exception: if the
+ * Java memory manager no longer has a strong reference to the object specified as a key, then the
+ * entry in the map will be removed.
+ * </p>
+ * <p>
+ * <b>Weak Reference:</b> If the only references to an object are weak references, the garbage
+ * collector can reclaim the object's memory at any time.it doesn't have to wait until the system
+ * runs out of memory. Usually, it will be freed the next time the garbage collector runs.
+ * </p>
+ * <p>
+ * The WeakHashMap class supports four constructors. The first form constructs a new, empty
+ * WeakHashMap with the default initial capacity (16) and the default load factor (0.75):
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">WeakHashMap</span><span class="pun">()</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * The second form constructs a new, empty WeakHashMap with the given initial capacity and the
+ * default load factor, which is 0.75:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">WeakHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> initialCapacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The third form constructs a new, empty WeakHashMap with the given initial capacity and the given
+ * load factor.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">WeakHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> initialCapacity</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> loadFactor</span><span class="pun">)</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * The fourth form constructs a new WeakHashMap with the same mappings as the specified Map:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">WeakHashMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pln"> t</span><span class="pun">)</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, TreeMap defines the following methods:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear() </b><br>
+ * Removes all mappings from this map.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean containsKey(Object key) </b><br>
+ * Returns true if this map contains a mapping for the specified key.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean containsValue(Object value) </b><br>
+ * Returns true if this map maps one or more keys to the specified value.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Set entrySet()</b><br>
+ * Returns a collection view of the mappings contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>Object get(Object key) </b><br>
+ * Returns the value to which the specified key is mapped in this weak hash map, or null if the map
+ * contains no mapping for this key.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>boolean isEmpty()</b><br>
+ * Returns true if this map contains no key-value mappings.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>Set keySet()</b><br>
+ * Returns a set view of the keys contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>Object put(Object key, Object value) </b><br>
+ * Associates the specified value with the specified key in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>void putAll(Map m) </b><br>
+ * Copies all of the mappings from the specified map to this map These mappings will replace any
+ * mappings that this map had for any of the keys currently in the specified map.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Object remove(Object key) </b><br>
+ * Removes the mapping for this key from this map if present.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of key-value mappings in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>Collection values()</b><br>
+ * Returns a collection view of the values contained in this map.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
