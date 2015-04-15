@@ -1811,5 +1811,91 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>The LinkedHashMap Class</h2>
+ *
+ * <p>
+ * This class extends HashMap and maintains a linked list of the entries in the map, in the order in
+ * which they were inserted.
+ * </p>
+ * <p>
+ * This allows insertion-order iteration over the map. That is, when iterating a LinkedHashMap, the
+ * elements will be returned in the order in which they were inserted.
+ * </p>
+ * <p>
+ * You can also create a LinkedHashMap that returns its elements in the order in which they were
+ * last accessed.
+ * </p>
+ * <p>
+ * The LinkedHashMap class supports five constructors. The first form constructs a default
+ * LinkedHashMap:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashMap</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The second form initializes the LinkedHashMap with the elements from m:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pln"> m</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The third form initializes the capacity:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The fourth form initializes both capacity and fill ratio. The meaning of capacity and fill ratio
+ * are the same as for HashMap:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> fillRatio</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * The last form allows you to specify whether the elements will be stored in the linked list by
+ * insertion order, or by order of last access. If Order is true, then access order is used. If
+ * Order is false, then insertion order is used.
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">LinkedHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> capacity</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> fillRatio</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">boolean</span><span class="pln"> </span><span class="typ">Order</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, LinkedHashMap defines following
+ * methods:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear() </b><br>
+ * Removes all mappings from this map.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean containsKey(Object key) </b><br>
+ * Returns true if this map maps one or more keys to the specified value.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>Object get(Object key) </b><br>
+ * Returns the value to which this map maps the specified key.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>protected boolean removeEldestEntry(Map.Entry eldest) </b><br>
+ * Returns true if this map should remove its eldest entry.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
