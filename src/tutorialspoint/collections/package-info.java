@@ -2035,5 +2035,55 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <p>
+ * The <i>AbstractCollection, AbstractSet, AbstractList, AbstractSequentialList</i> and
+ * <i>AbstractMap</i> classes provide skeletal implementations of the core collection interfaces, to
+ * minimize the effort required to implement them.
+ * </p>
+ * <p>
+ * The following legacy classes defined by java.util have been discussed in previous tutorial:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Classes with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td>Vector<br>
+ * This implements a dynamic array. It is similar to ArrayList, but with some differences.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td>Stack<br>
+ * Stack is a subclass of Vector that implements a standard last-in, first-out stack.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td>Dictionary<br>
+ * Dictionary is an abstract class that represents a key/value storage repository and operates much
+ * like Map.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td>Hashtable<br>
+ * Hashtable was part of the original java.util and is a concrete implementation of a Dictionary.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td>Properties<br>
+ * Properties is a subclass of Hashtable. It is used to maintain lists of values in which the key is
+ * a String and the value is also a String.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td>BitSet<br>
+ * A BitSet class creates a special type of array that holds bit values. This array can increase in
+ * size as needed.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
