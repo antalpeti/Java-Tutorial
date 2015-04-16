@@ -2085,5 +2085,234 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>The Collection Algorithms:</h2>
+ *
+ * <p>
+ * The collections framework defines several algorithms that can be applied to collections and maps.
+ * These algorithms are defined as static methods within the Collections class.
+ * </p>
+ * <p>
+ * Several of the methods can throw a <b>ClassCastException</b>, which occurs when an attempt is
+ * made to compare incompatible types, or an <b>UnsupportedOperationException</b>, which occurs when
+ * an attempt is made to modify an unmodifiable collection.
+ * </p>
+ * <p>
+ * Collections define three static variables: EMPTY_SET, EMPTY_LIST, and EMPTY_MAP. All are
+ * immutable.
+ * </p>
+ * <p>
+ * The collections framework defines several algorithms that can be applied to collections and maps.
+ * </p>
+ * <p>
+ * These algorithms are defined as static methods within the Collections class. Several of the
+ * methods can throw a <b>ClassCastException</b>, which occurs when an attempt is made to compare
+ * incompatible types, or an <b>UnsupportedOperationException</b>, which occurs when an attempt is
+ * made to modify an unmodifiable collection.
+ * </p>
+ * <p>
+ * The methods defined in collection framework's algorithm are summarized in the following table:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>static int binarySearch(List list, Object value, Comparator c)</b><br>
+ * Searches for value in list ordered according to c. Returns the position of value in list, or -1
+ * if value is not found</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>static int binarySearch(List list, Object value)</b><br>
+ * Searches for value in list. The list must be sorted. Returns the position of value in list, or -1
+ * if value is not found.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>static void copy(List list1, List list2)</b><br>
+ * Copies the elements of list2 to list1.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>static Enumeration enumeration(Collection c)</b><br>
+ * Returns an enumeration over c.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>static void fill(List list, Object obj)</b><br>
+ * Assigns obj to each element of list.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>static int indexOfSubList(List list, List subList)</b><br>
+ * Searches list for the first occurrence of subList. Returns the index of the first match, or .1 if
+ * no match is found.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>static int lastIndexOfSubList(List list, List subList)</b><br>
+ * Searches list for the last occurrence of subList. Returns the index of the last match, or .1 if
+ * no match is found.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>static ArrayList list(Enumeration enum)</b><br>
+ * Returns an ArrayList that contains the elements of enum.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>static Object max(Collection c, Comparator comp)</b><br>
+ * Returns the maximum element in c as determined by comp.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>static Object max(Collection c)</b><br>
+ * Returns the maximum element in c as determined by natural ordering. The collection need not be
+ * sorted.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>static Object min(Collection c, Comparator comp)</b><br>
+ * Returns the minimum element in c as determined by comp. The collection need not be sorted.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>static Object min(Collection c)</b><br>
+ * Returns the minimum element in c as determined by natural ordering.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>static List nCopies(int num, Object obj)</b><br>
+ * Returns num copies of obj contained in an immutable list. num must be greater than or equal to
+ * zero.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>static boolean replaceAll(List list, Object old, Object new)</b><br>
+ * Replaces all occurrences of old with new in list. Returns true if at least one replacement
+ * occurred. Returns false, otherwise.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>static void reverse(List list)</b><br>
+ * Reverses the sequence in list.</td>
+ * </tr>
+ * <tr>
+ * <td>16</td>
+ * <td><b>static Comparator reverseOrder( )</b><br>
+ * Returns a reverse comparator</td>
+ * </tr>
+ * <tr>
+ * <td>17</td>
+ * <td><b>static void rotate(List list, int n)</b><br>
+ * Rotates list by n places to the right. To rotate left, use a negative value for n.</td>
+ * </tr>
+ * <tr>
+ * <td>18</td>
+ * <td><b>static void shuffle(List list, Random r)</b><br>
+ * Shuffles (i.e., randomizes) the elements in list by using r as a source of random numbers.</td>
+ * </tr>
+ * <tr>
+ * <td>19</td>
+ * <td><b>static void shuffle(List list)</b><br>
+ * Shuffles (i.e., randomizes) the elements in list.</td>
+ * </tr>
+ * <tr>
+ * <td>20</td>
+ * <td><b>static Set singleton(Object obj)</b><br>
+ * Returns obj as an immutable set. This is an easy way to convert a single object into a set.</td>
+ * </tr>
+ * <tr>
+ * <td>21</td>
+ * <td><b>static List singletonList(Object obj)</b><br>
+ * Returns obj as an immutable list. This is an easy way to convert a single object into a list.</td>
+ * </tr>
+ * <tr>
+ * <td>22</td>
+ * <td><b>static Map singletonMap(Object k, Object v)</b><br>
+ * Returns the key/value pair k/v as an immutable map. This is an easy way to convert a single
+ * key/value pair into a map.</td>
+ * </tr>
+ * <tr>
+ * <td>23</td>
+ * <td><b>static void sort(List list, Comparator comp)</b><br>
+ * Sorts the elements of list as determined by comp.</td>
+ * </tr>
+ * <tr>
+ * <td>24</td>
+ * <td><b>static void sort(List list)</b><br>
+ * Sorts the elements of list as determined by their natural ordering.</td>
+ * </tr>
+ * <tr>
+ * <td>25</td>
+ * <td><b>static void swap(List list, int idx1, int idx2)</b><br>
+ * Exchanges the elements in list at the indices specified by idx1 and idx2.</td>
+ * </tr>
+ * <tr>
+ * <td>26</td>
+ * <td><b>static Collection synchronizedCollection(Collection c)</b><br>
+ * Returns a thread-safe collection backed by c.</td>
+ * </tr>
+ * <tr>
+ * <td>27</td>
+ * <td><b>static List synchronizedList(List list)</b><br>
+ * Returns a thread-safe list backed by list.</td>
+ * </tr>
+ * <tr>
+ * <td>28</td>
+ * <td><b>static Map synchronizedMap(Map m)</b><br>
+ * Returns a thread-safe map backed by m.</td>
+ * </tr>
+ * <tr>
+ * <td>29</td>
+ * <td><b>static Set synchronizedSet(Set s)</b><br>
+ * Returns a thread-safe set backed by s.</td>
+ * </tr>
+ * <tr>
+ * <td>30</td>
+ * <td><b>static SortedMap synchronizedSortedMap(SortedMap sm)</b><br>
+ * Returns a thread-safe sorted set backed by sm.</td>
+ * </tr>
+ * <tr>
+ * <td>31</td>
+ * <td><b>static SortedSet synchronizedSortedSet(SortedSet ss)</b><br>
+ * Returns a thread-safe set backed by ss.</td>
+ * </tr>
+ * <tr>
+ * <td>32</td>
+ * <td><b>static Collection unmodifiableCollection(Collection c)</b><br>
+ * Returns an unmodifiable collection backed by c.</td>
+ * </tr>
+ * <tr>
+ * <td>33</td>
+ * <td><b>static List unmodifiableList(List list)</b><br>
+ * Returns an unmodifiable list backed by list.</td>
+ * </tr>
+ * <tr>
+ * <td>34</td>
+ * <td><b>static Map unmodifiableMap(Map m)</b><br>
+ * Returns an unmodifiable map backed by m.</td>
+ * </tr>
+ * <tr>
+ * <td>35</td>
+ * <td><b>static Set unmodifiableSet(Set s)</b><br>
+ * Returns an unmodifiable set backed by s.</td>
+ * </tr>
+ * <tr>
+ * <td>36</td>
+ * <td><b>static SortedMap unmodifiableSortedMap(SortedMap sm)</b><br>
+ * Returns an unmodifiable sorted map backed by sm.</td>
+ * </tr>
+ * <tr>
+ * <td>37</td>
+ * <td><b>static SortedSet unmodifiableSortedSet(SortedSet ss)</b><br>
+ * Returns an unmodifiable sorted set backed by ss.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
