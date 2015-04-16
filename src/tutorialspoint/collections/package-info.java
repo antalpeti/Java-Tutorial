@@ -1897,5 +1897,143 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>The IdentityHashMap Class</h2>
+ *
+ * <p>
+ * This class implements AbstractMap. It is similar to HashMap except that it uses reference
+ * equality when comparing elements.
+ * </p>
+ * <p>
+ * This class is not a general-purpose Map implementation. While this class implements the Map
+ * interface, it intentionally violates Map's general contract, which mandates the use of the equals
+ * method when comparing objects.
+ * </p>
+ * <p>
+ * This class is designed for use only in the rare cases wherein reference-equality semantics are
+ * required.
+ * </p>
+ * <p>
+ * This class provides constant-time performance for the basic operations (get and put), assuming
+ * the system identity hash function (System.identityHashCode(Object)) disperses elements properly
+ * among the buckets.
+ * </p>
+ * <p>
+ * This class has one tuning parameter (which affects performance but not semantics): expected
+ * maximum size. This parameter is the maximum number of key-value mappings that the map is expected
+ * to hold.
+ * </p>
+ * <p>
+ * The IdentityHashMap class supports three constructors. The first form constructs a new, empty
+ * identity hash map with a default expected maximum size (21):
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">IdentityHashMap</span><span class="pun">()</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * The second form constructs a new, empty map with the specified expected maximum size:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">IdentityHashMap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> expectedMaxSize</span><span class="pun">)</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * The third form constructs a new identity hash map containing the keys-value mappings in the
+ * specified map:
+ * </p>
+ *
+ * <pre>
+ * <span class="typ">IdentityHashMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pln"> m</span><span class="pun">)</span><span class="pln"> </span>
+ * </pre>
+ * <p>
+ * Apart from the methods inherited from its parent classes, IdentityHashMap defines following
+ * methods:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void clear()</b><br>
+ * Removes all mappings from this map.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object clone()</b><br>
+ * Returns a shallow copy of this identity hash map: the keys and values themselves are not cloned.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean containsKey(Object key) </b><br>
+ * Tests whether the specified object reference is a key in this identity hash map.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>boolean containsValue(Object value) </b><br>
+ * Tests whether the specified object reference is a value in this identity hash map.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>Set entrySet() </b><br>
+ * Returns a set view of the mappings contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>boolean equals(Object o) </b><br>
+ * Compares the specified object with this map for equality.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>Object get(Object key) </b><br>
+ * Returns the value to which the specified key is mapped in this identity hash map, or null if the
+ * map contains no mapping for this key.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>int hashCode() </b><br>
+ * Returns the hash code value for this map.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>boolean isEmpty() </b><br>
+ * Returns true if this identity hash map contains no key-value mappings.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>Set keySet() </b><br>
+ * Returns an identity-based set view of the keys contained in this map.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>Object put(Object key, Object value)</b><br>
+ * Associates the specified value with the specified key in this identity hash map.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>void putAll(Map t) </b><br>
+ * Copies all of the mappings from the specified map to this map These mappings will replace any
+ * mappings that this map had for any of the keys currently in the specified map.</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>Object remove(Object key) </b><br>
+ * Removes the mapping for this key from this map if present.</td>
+ * </tr>
+ * <tr>
+ * <td>14</td>
+ * <td><b>int size() </b><br>
+ * Returns the number of key-value mappings in this identity hash map.</td>
+ * </tr>
+ * <tr>
+ * <td>15</td>
+ * <td><b>Collection values() </b><br>
+ * Returns a collection view of the values contained in this map.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
