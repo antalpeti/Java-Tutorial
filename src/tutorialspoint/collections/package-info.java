@@ -2314,5 +2314,135 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>How to use an Iterator ?</h2>
+ *
+ * <p>
+ * Often, you will want to cycle through the elements in a collection. For example, you might want
+ * to display each element.
+ * </p>
+ * <p>
+ * The easiest way to do this is to employ an iterator, which is an object that implements either
+ * the Iterator or the ListIterator interface.
+ * </p>
+ * <p>
+ * Iterator enables you to cycle through a collection, obtaining or removing elements. ListIterator
+ * extends Iterator to allow bidirectional traversal of a list, and the modification of elements.
+ * </p>
+ * <p>
+ * Before you can access a collection through an iterator, you must obtain one. Each of the
+ * collection classes provides an iterator( ) method that returns an iterator to the start of the
+ * collection. By using this iterator object, you can access each element in the collection, one
+ * element at a time.
+ * </p>
+ * <p>
+ * In general, to use an iterator to cycle through the contents of a collection, follow these steps:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Obtain an iterator to the start of the collection by calling the collection's iterator( ) method.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Set up a loop that makes a call to hasNext( ). Have the loop iterate as long as hasNext( )
+ * returns true.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Within the loop, obtain each element by calling next( ).
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * For collections that implement List, you can also obtain an iterator by calling ListIterator.
+ * </p>
+ *
+ * <h2>The Methods Declared by Iterator:</h2>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>boolean hasNext( )</b><br>
+ * Returns true if there are more elements. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object next( )</b><br>
+ * Returns the next element. Throws NoSuchElementException if there is not a next element.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>void remove( )</b><br>
+ * Removes the current element. Throws IllegalStateException if an attempt is made to call remove( )
+ * that is not preceded by a call to next( ).</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ * <h2>The Methods Declared by ListIterator:</h2>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>void add(Object obj)</b><br>
+ * Inserts obj into the list in front of the element that will be returned by the next call to next(
+ * ).</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>boolean hasNext( )</b><br>
+ * Returns true if there is a next element. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>boolean hasPrevious( )</b><br>
+ * Returns true if there is a previous element. Otherwise, returns false.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>Object next( )</b><br>
+ * Returns the next element. A NoSuchElementException is thrown if there is not a next element.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>int nextIndex( )</b><br>
+ * Returns the index of the next element. If there is not a next element, returns the size of the
+ * list.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>Object previous( )</b><br>
+ * Returns the previous element. A NoSuchElementException is thrown if there is not a previous
+ * element.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>int previousIndex( )</b><br>
+ * Returns the index of the previous element. If there is not a previous element, returns -1.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>void remove( )</b><br>
+ * Removes the current element from the list. An IllegalStateException is thrown if remove( ) is
+ * called before next( ) or previous( ) is invoked.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>void set(Object obj)</b><br>
+ * Assigns obj to the current element. This is the element last returned by a call to either next( )
+ * or previous( ).</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.collections;
