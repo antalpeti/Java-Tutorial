@@ -2483,5 +2483,22 @@
  * <p>
  * Overriding equals( ) is unnecessary, and most simple comparators will not do so.
  * </p>
+ *
+ * <p>
+ * <b>Note:</b> Sorting of the Arrays class is as the same as the Collections.
+ * </p>
+ *
+ * <h2>Summary:</h2>
+ * <p>
+ * The Java collections framework gives the programmer access to prepackaged data structures as well
+ * as to algorithms for manipulating them.
+ * </p>
+ * <p>
+ * A collection is an object that can hold references to other objects. The collection interfaces
+ * declare the operations that can be performed on each type of collection.
+ * </p>
+ * <p>
+ * The classes and interfaces of the collections framework are in package java.util.
+ * </p>
  */
 package tutorialspoint.collections;
