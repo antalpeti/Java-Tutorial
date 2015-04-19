@@ -2444,5 +2444,44 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>How to use a Comparator ?</h2>
+ * <p>
+ * Both TreeSet and TreeMap store elements in sorted order. However, it is the comparator that
+ * defines precisely what <i>sorted order</i> means.
+ * </p>
+ * <p>
+ * The Comparator interface defines two methods: compare( ) and equals( ). The compare( ) method,
+ * shown here, compares two elements for order:
+ * </p>
+ * <h2>The compare Method:</h2>
+ *
+ * <pre>
+ * <span class="kwd">int</span><span class="pln"> compare</span><span class="pun">(</span><span class="typ">Object</span><span class="pln"> obj1</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Object</span><span class="pln"> obj2</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * obj1 and obj2 are the objects to be compared. This method returns zero if the objects are equal.
+ * It returns a positive value if obj1 is greater than obj2. Otherwise, a negative value is
+ * returned.
+ * </p>
+ * <p>
+ * By overriding compare( ), you can alter the way that objects are ordered. For example, to sort in
+ * reverse order, you can create a comparator that reverses the outcome of a comparison.
+ * </p>
+ * <h2>The equals Method:</h2>
+ * <p>
+ * The equals( ) method, shown here, tests whether an object equals the invoking comparator:
+ * </p>
+ *
+ * <pre>
+ * <span class="kwd">boolean</span><span class="pln"> equals</span><span class="pun">(</span><span class="typ">Object</span><span class="pln"> obj</span><span class="pun">)</span>
+ * </pre>
+ * <p>
+ * obj is the object to be tested for equality. The method returns true if obj and the invoking
+ * object are both Comparator objects and use the same ordering. Otherwise, it returns false.
+ * </p>
+ * <p>
+ * Overriding equals( ) is unnecessary, and most simple comparators will not do so.
+ * </p>
  */
 package tutorialspoint.collections;
