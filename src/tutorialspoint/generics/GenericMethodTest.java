@@ -1,6 +1,5 @@
 package tutorialspoint.generics;
 
-
 public class GenericMethodTest {
   // generic method printArray
   public static <E> void printArray(E[] inputArray) {
