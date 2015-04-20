@@ -33,5 +33,11 @@
  * </p>
  * </li>
  * </ul>
+ *
+ * <h2>Bounded Type Parameters:</h2>
+ * <p>
+ * To declare a bounded type parameter, list the type parameter's name, followed by the extends
+ * keyword, followed by its upper bound.
+ * </p>
  */
 package tutorialspoint.generics;
