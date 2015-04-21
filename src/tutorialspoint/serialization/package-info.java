@@ -64,5 +64,9 @@
  * documentation for the class. The test is simple: If the class implements java.io.Serializable,
  * then it is serializable; otherwise, it's not.
  * </p>
+ * <p>
+ * <b>Note:</b> When serializing an object to a file, the standard convention in Java is to give the
+ * file a <b>.ser </b> extension.
+ * </p>
  */
 package tutorialspoint.serialization;
