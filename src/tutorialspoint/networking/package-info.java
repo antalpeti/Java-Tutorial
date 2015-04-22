@@ -1,6 +1,7 @@
 /**
  * Contains some examples about Networking topic.
  *
+ * <head><link rel="stylesheet" type="text/css" href="../../../files/mystyle.css"></head>
  * <p>
  * The term <i>network programming</i> refers to writing programs that execute across multiple
  * devices (computers), in which the devices are all connected to each other using a network.
