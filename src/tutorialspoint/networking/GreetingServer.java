@@ -7,6 +7,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
+/**
+ * <p>
+ * It is an example of a server application that uses the Socket class to listen for clients on a
+ * port number specified by a command-line argument.
+ * </p>
+ * <b>Usage:</b> <code>java GreetingServer port</code><br>
+ * <b>Example:</b> <code>java GreetingServer 2015</code>
+ */
 public class GreetingServer extends Thread {
   private ServerSocket serverSocket;
 

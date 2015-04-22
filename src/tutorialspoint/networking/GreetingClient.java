@@ -7,6 +7,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
+/**
+ * <p>
+ * It is a client application that connects to a server by using a socket and sends a greeting, and
+ * then waits for a response.
+ * </p>
+ * <b>Usage:</b> <code>java GreetingClient hostname port</code><br>
+ * <b>Example:</b> <code>java GreetingClient localhost 2015</code>
+ */
 public class GreetingClient {
   public static void main(String[] args) {
     String serverName = args[0];
