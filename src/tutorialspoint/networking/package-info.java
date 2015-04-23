@@ -336,5 +336,134 @@
  * </tr>
  * </tbody>
  * </table>
+ *
+ * <h2>URL Processing</h2>
+ * <p>
+ * URL stands for Uniform Resource Locator and represents a resource on the World Wide Web, such as
+ * a Web page or FTP directory.
+ * </p>
+ * <p>
+ * A URL can be broken down into parts, as follows:
+ * </p>
+ *
+ * <pre>
+ * <span class="pln">protocol</span><span class="pun">:</span><span class="com">//host:port/path?query#ref</span>
+ * </pre>
+ * <p>
+ * Examples of protocols include HTTP, HTTPS, FTP, and File. The path is also referred to as the
+ * filename, and the host is also called the authority.
+ * </p>
+ * <p>
+ * The following is a URL to a Web page whose protocol is HTTP:
+ * </p>
+ *
+ * <pre>
+ * <span class="pln">http</span><span class="pun">:</span><span class="com">//www.amrood.com/index.htm?language=en#j2se</span>
+ * </pre>
+ * <p>
+ * Notice that this URL does not specify a port, in which case the default port for the protocol is
+ * used. With HTTP, the default port is 80.
+ * </p>
+ *
+ * <h2>URL Class Methods:</h2>
+ * <p>
+ * The <b>java.net.URL</b> class represents a URL and has complete set of methods to manipulate URL
+ * in Java.
+ * </p>
+ * <p>
+ * The URL class has several constructors for creating URLs, including the following:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>public URL(String protocol, String host, int port, String file) throws
+ * MalformedURLException.</b><br>
+ * Creates a URL by putting together the given parts.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>public URL(String protocol, String host, String file) throws MalformedURLException</b><br>
+ * Identical to the previous constructor, except that the default port for the given protocol is
+ * used.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>public URL(String url) throws MalformedURLException</b><br>
+ * Creates a URL from the given String</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>public URL(URL context, String url) throws MalformedURLException</b><br>
+ * Creates a URL by parsing the together the URL and String arguments</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ * <p>
+ * The URL class contains many methods for accessing the various parts of the URL being represented.
+ * Some of the methods in the URL class include the following:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>public String getPath()</b><br>
+ * Returns the path of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>public String getQuery()</b><br>
+ * Returns the query part of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>public String getAuthority()</b><br>
+ * Returns the authority of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>public int getPort()</b><br>
+ * Returns the port of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>public int getDefaultPort()</b><br>
+ * Returns the default port for the protocol of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>public String getProtocol()</b><br>
+ * Returns the protocol of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>public String getHost()</b><br>
+ * Returns the host of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>public String getFile()</b><br>
+ * Returns the filename of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>public String getRef()</b><br>
+ * Returns the reference part of the URL.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>public URLConnection openConnection() throws IOException</b><br>
+ * Opens a connection to the URL, allowing a client to communicate with the resource.</td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.networking;
