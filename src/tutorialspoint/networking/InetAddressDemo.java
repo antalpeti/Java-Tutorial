@@ -19,7 +19,7 @@ public class InetAddressDemo {
     address = InetAddress.getByAddress(ipAddress);
     System.out.println(address);
     System.out.println("getLocalHost: " + InetAddress.getLocalHost());
-    checkUpcRange();
+    checkUpcIpAddressesBlock();
   }
 
   public static void checkSites() {
@@ -42,7 +42,7 @@ public class InetAddressDemo {
     }
   }
 
-  public static void checkUpcRange() {
+  public static void checkUpcIpAddressesBlock() {
     for (int i = 78; i < 79; i++) {
       for (int j = 139; j < 140; j++) {
         for (int k = 0; k < 64; k++) {
