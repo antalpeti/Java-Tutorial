@@ -10,7 +10,8 @@ import java.net.URLConnection;
 public class URLConnDemo {
   public static void main(String[] args) {
     try {
-      URL url = new URL("http://www.amrood.com");
+      // URL url = new URL("http://www.amrood.com");
+      URL url = new URL("http://www.javacodegeeks.com");
       URLConnection urlConnection = url.openConnection();
       HttpURLConnection connection = null;
       if (urlConnection instanceof HttpURLConnection) {
@@ -26,6 +27,15 @@ public class URLConnDemo {
         urlString += current;
       }
       System.out.println(urlString);
+      System.out.println("getResponseCode: " + connection.getResponseCode());
+      System.out.println("getContentEncoding: " + connection.getContentEncoding());
+      System.out.println("getContentLength: " + connection.getContentLength());
+      System.out.println("getResponseCode: " + connection.getResponseCode());
+      System.out.println("getConnectTimeout: " + connection.getConnectTimeout());
+      System.out.println("getDate: " + connection.getDate());
+      System.out.println("getLastModified: " + connection.getLastModified());
+      System.out.println("getExpiration: " + connection.getExpiration());
+      System.out.println("getURL: " + connection.getURL());
     } catch (IOException e) {
       e.printStackTrace();
     }
