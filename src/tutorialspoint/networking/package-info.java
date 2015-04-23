@@ -46,7 +46,7 @@
  * <p>
  * The following steps occur when establishing a TCP connection between two computers using sockets:
  * </p>
- * <ul class="list">
+ * <ul>
  * <li>
  * <p>
  * The server instantiates a ServerSocket object, denoting which port number communication is to
@@ -462,6 +462,113 @@
  * <td>10</td>
  * <td><b>public URLConnection openConnection() throws IOException</b><br>
  * Opens a connection to the URL, allowing a client to communicate with the resource.</td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <h2>URLConnections Class Methods:</h2>
+ * <p>
+ * The openConnection() method returns a <b>java.net.URLConnection</b>, an abstract class whose
+ * subclasses represent the various types of URL connections.
+ * </p>
+ * <p>
+ * For example:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * If you connect to a URL whose protocol is HTTP, the openConnection() method returns an
+ * HttpURLConnection object.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If you connect to a URL that represents a JAR file, the openConnection() method returns a
+ * JarURLConnection object.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * etc...
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * The URLConnection class has many methods for setting or determining information about the
+ * connection, including the following:
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>Object getContent() </b><br>
+ * Retrieves the contents of this URL connection.</td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>Object getContent(Class[] classes) </b><br>
+ * Retrieves the contents of this URL connection.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>String getContentEncoding() </b><br>
+ * Returns the value of the content-encoding header field.</td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>int getContentLength() </b><br>
+ * Returns the value of the content-length header field.</td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>String getContentType() </b><br>
+ * Returns the value of the content-type header field.</td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>int getLastModified() </b><br>
+ * Returns the value of the last-modified header field.</td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>long getExpiration() </b><br>
+ * Returns the value of the expires header field.</td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>long getIfModifiedSince() </b><br>
+ * Returns the value of this object's ifModifiedSince field.</td>
+ * </tr>
+ * <tr>
+ * <td>9</td>
+ * <td><b>public void setDoInput(boolean input)</b><br>
+ * Passes in true to denote that the connection will be used for input. The default value is true
+ * because clients typically read from a URLConnection.</td>
+ * </tr>
+ * <tr>
+ * <td>10</td>
+ * <td><b>public void setDoOutput(boolean output)</b><br>
+ * Passes in true to denote that the connection will be used for output. The default value is false
+ * because many types of URLs do not support being written to.</td>
+ * </tr>
+ * <tr>
+ * <td>11</td>
+ * <td><b>public InputStream getInputStream() throws IOException</b><br>
+ * Returns the input stream of the URL connection for reading from the resource.</td>
+ * </tr>
+ * <tr>
+ * <td>12</td>
+ * <td><b>public OutputStream getOutputStream() throws IOException</b><br>
+ * Returns the output stream of the URL connection for writing to the resource</td>
+ * </tr>
+ * <tr>
+ * <td>13</td>
+ * <td><b>public URL getURL()</b><br>
+ * Returns the URL that this URLConnection object is connected to</td>
  * </tr>
  * </tbody>
  * </table>
