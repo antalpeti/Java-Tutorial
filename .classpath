@@ -2,7 +2,15 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/activation.jar"/>
-	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="E:/Software Engineering/J2SE/jaf-1.1.1/activation.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/E:/Software%20Engineering/J2SE/jaf-1.1.1/docs/javadocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Software Engineering/J2SE/javamail-1.4.5/mail.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/E:/Software%20Engineering/J2SE/javamail-1.4.5/docs/javadocs/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
