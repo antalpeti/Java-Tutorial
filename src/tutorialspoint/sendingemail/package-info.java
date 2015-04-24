@@ -9,17 +9,20 @@
  * <li>
  * <p>
  * You can download latest version of <a
- * href="http://www.oracle.com/technetwork/java/index-138643.html" target="_blank">JavaMail (Version
- * 1.4.5</a> from Java's standard website.
+ * href="http://www.oracle.com/technetwork/java/index-138643.html">JavaMail (Version 1.4.5)</a> from
+ * Java's standard website.
  * </p>
  * </li>
  * <li>
  * <p>
  * You can download latest version of <a
- * href="http://www.oracle.com/technetwork/articles/java/index-135046.html" target="_blank">JAF
- * (Version 1.1.1)</a> from Java's standard website.
+ * href="http://www.oracle.com/technetwork/articles/java/index-135046.html">JAF (Version 1.1.1)</a>
+ * from Java's standard website.
  * </p>
  * </li>
  * </ul>
+ * <p>
+ * <a href="http://www.oracle.com/technetwork/java/javamail/faq/index.htm">JavaMail API FAQ</a>
+ * </p>
  */
 package tutorialspoint.sendingemail;
