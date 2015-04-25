@@ -24,5 +24,15 @@
  * <p>
  * <a href="http://www.oracle.com/technetwork/java/javamail/faq/index.htm">JavaMail API FAQ</a>
  * </p>
+ *
+ * Required to install a simple SMTP server to send mails from localhost.<br>
+ * For example: <a href="https://www.hmailserver.com/">hMailServer</a>
+ *
+ * <p>
+ * After installation start the hMailServer Administrator:
+ * <ol>
+ * <li>Open <i>Settings>Advanced>Ip Ranges>My Computer</i></li>
+ * <li>Make unchecked all the checkbox in the <i>Require SMTP authentication</i> section</li>
+ * </ol>
  */
 package tutorialspoint.sendingemail;
