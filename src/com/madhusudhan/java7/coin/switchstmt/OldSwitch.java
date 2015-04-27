@@ -4,41 +4,37 @@ import com.madhusudhan.java7.domain.Trade;
 
 public class OldSwitch {
 
-  private static final String PENDING = "PENDING";
-  private static final String EXECUTED = "EXECUTED";
-  private static final String NEW = "NEW";
-
   private void processTrade(Trade t) {
     String status = t.getStatus();
 
-    if (status.equalsIgnoreCase(OldSwitch.NEW)) {
+    if (status.equalsIgnoreCase(TradeStatusConstants.NEW)) {
       newTrade(t);
-    } else if (status.equalsIgnoreCase(OldSwitch.EXECUTED)) {
+    } else if (status.equalsIgnoreCase(TradeStatusConstants.EXECUTE)) {
       executeTrade(t);
-    } else if (status.equalsIgnoreCase(OldSwitch.PENDING)) {
+    } else if (status.equalsIgnoreCase(TradeStatusConstants.PENDING)) {
       pendingTrade(t);
     }
   }
 
-  private void newTrade(Trade t) {
-    System.out.println("The trade status is new.");
+  private void executeTrade(Trade t) {
+    TradeStatusUtil.printStatus(TradeStatusConstants.EXECUTE);
   }
 
-  private void executeTrade(Trade t) {
-    System.out.println("The trade status is execute.");
+  private void newTrade(Trade t) {
+    TradeStatusUtil.printStatus(TradeStatusConstants.NEW);
   }
 
   private void pendingTrade(Trade t) {
-    System.out.println("The trade status is pending.");
+    TradeStatusUtil.printStatus(TradeStatusConstants.PENDING);
   }
 
   public static void main(String[] args) {
     OldSwitch os = new OldSwitch();
     Trade t = new Trade();
     os.processTrade(t);
-    t.setStatus(EXECUTED);
+    t.setStatus(TradeStatusConstants.EXECUTE);
     os.processTrade(t);
-    t.setStatus(PENDING);
+    t.setStatus(TradeStatusConstants.PENDING);
     os.processTrade(t);
   }
 }

@@ -4,21 +4,17 @@ import com.madhusudhan.java7.domain.Trade;
 
 public class NewSwitch {
 
-  private static final String PENDING = "PENDING";
-  private static final String EXECUTE = "EXECUTE";
-  private static final String NEW = "NEW";
-
   public void processTrade(Trade t) {
     String status = t.getStatus();
 
     switch (status) {
-      case NEW:
+      case TradeStatusConstants.NEW:
         newTrade(t);
         break;
-      case EXECUTE:
+      case TradeStatusConstants.EXECUTE:
         executeTrade(t);
         break;
-      case PENDING:
+      case TradeStatusConstants.PENDING:
         pendingTrade(t);
         break;
 
@@ -27,25 +23,25 @@ public class NewSwitch {
     }
   }
 
-  private void pendingTrade(Trade t) {
-    System.out.println("The trade status is pending.");
-  }
-
   private void executeTrade(Trade t) {
-    System.out.println("The trade status is execute.");
+    TradeStatusUtil.printStatus(TradeStatusConstants.EXECUTE);
   }
 
   private void newTrade(Trade t) {
-    System.out.println("The trade status is new.");
+    TradeStatusUtil.printStatus(TradeStatusConstants.NEW);
+  }
+
+  private void pendingTrade(Trade t) {
+    TradeStatusUtil.printStatus(TradeStatusConstants.PENDING);
   }
 
   public static void main(String[] args) {
     NewSwitch ns = new NewSwitch();
     Trade t = new Trade();
     ns.processTrade(t);
-    t.setStatus(EXECUTE);
+    t.setStatus(TradeStatusConstants.EXECUTE);
     ns.processTrade(t);
-    t.setStatus(PENDING);
+    t.setStatus(TradeStatusConstants.PENDING);
     ns.processTrade(t);
   }
 
