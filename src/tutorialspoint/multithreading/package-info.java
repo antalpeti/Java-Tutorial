@@ -114,5 +114,28 @@
  * Once Thread object is created, you can start it by calling <b>start( )</b> method, which executes
  * a call to run( ) method. Following is simple syntax of start() method:
  * </p>
+ *
+ * <h2>Create Thread by Extending Thread Class:</h2>
+ * <p>
+ * The second way to create a thread is to create a new class that extends <b>Thread</b> class using
+ * the following two simple steps. This approach provides more flexibility in handling multiple
+ * threads created using available methods in Thread class.
+ * </p>
+ * <h3>Step 1</h3>
+ * <p>
+ * You will need to override <b>run( )</b> method available in Thread class. This method provides
+ * entry point for the thread and you will put you complete business logic inside this method.
+ * Following is simple syntax of run() method:
+ * </p>
+ *
+ * <pre>
+ * <span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> run</span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span>
+ * </pre>
+ *
+ * <h3>Step 2</h3>
+ * <p>
+ * Once Thread object is created, you can start it by calling <b>start( )</b> method, which executes
+ * a call to run( ) method. Following is simple syntax of start() method:
+ * </p>
  */
 package tutorialspoint.multithreading;
