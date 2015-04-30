@@ -137,5 +137,143 @@
  * Once Thread object is created, you can start it by calling <b>start( )</b> method, which executes
  * a call to run( ) method. Following is simple syntax of start() method:
  * </p>
+ *
+ * <h2>Thread Methods:</h2>
+ * <p>
+ * Following is the list of important methods available in the Thread class.
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>public void start()</b>
+ * <p>
+ * Starts the thread in a separate path of execution, then invokes the run() method on this Thread
+ * object.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>public void run()</b>
+ * <p>
+ * If this Thread object was instantiated using a separate Runnable target, the run() method is
+ * invoked on that Runnable
+ * </p>
+ * object.</td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>public final void setName(String name)</b>
+ * <p>
+ * Changes the name of the Thread object. There is also a getName() method for retrieving the name.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>public final void setPriority(int priority)</b>
+ * <p>
+ * Sets the priority of this Thread object. The possible values are between 1 and 10.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>public final void setDaemon(boolean on)</b>
+ * <p>
+ * A parameter of true denotes this Thread as a daemon thread.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>6</td>
+ * <td><b>public final void join(long millisec)</b>
+ * <p>
+ * The current thread invokes this method on a second thread, causing the current thread to block
+ * until the second thread terminates or the specified number of milliseconds passes.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>7</td>
+ * <td><b>public void interrupt()</b>
+ * <p>
+ * Interrupts this thread, causing it to continue execution if it was blocked for any reason.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>8</td>
+ * <td><b>public final boolean isAlive()</b>
+ * <p>
+ * Returns true if the thread is alive, which is any time after the thread has been started but
+ * before it runs to completion.
+ * </p>
+ * </td>
+ * </tr>
+ * </tbody>
+ * </table>
+ *
+ * <p>
+ * The previous methods are invoked on a particular Thread object. The following methods in the
+ * Thread class are static. Invoking one of the static methods performs the operation on the
+ * currently running thread.
+ * </p>
+ * <table>
+ * <tbody>
+ * <tr>
+ * <th>SN</th>
+ * <th>Methods with Description</th>
+ * </tr>
+ * <tr>
+ * <td>1</td>
+ * <td><b>public static void yield()</b>
+ * <p>
+ * Causes the currently running thread to yield to any other threads of the same priority that are
+ * waiting to be scheduled.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>2</td>
+ * <td><b>public static void sleep(long millisec)</b>
+ * <p>
+ * Causes the currently running thread to block for at least the specified number of milliseconds.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>3</td>
+ * <td><b>public static boolean holdsLock(Object x)</b>
+ * <p>
+ * Returns true if the current thread holds the lock on the given Object.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>4</td>
+ * <td><b>public static Thread currentThread()</b>
+ * <p>
+ * Returns a reference to the currently running thread, which is the thread that invokes this
+ * method.
+ * </p>
+ * </td>
+ * </tr>
+ * <tr>
+ * <td>5</td>
+ * <td><b>public static void dumpStack()</b>
+ * <p>
+ * Prints the stack trace for the currently running thread, which is useful when debugging a
+ * multithreaded application.
+ * </p>
+ * </td>
+ * </tr>
+ * </tbody>
+ * </table>
  */
 package tutorialspoint.multithreading;
