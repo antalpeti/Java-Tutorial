@@ -1,22 +1,44 @@
 package com.tutorialspoint.multithreading.threadsynchronization;
 
+
 public class TestThread {
   public static void main(String args[]) {
 
-    PrintDemo PD = new PrintDemo();
+    PrintDemo pd = new PrintDemo();
 
-    ThreadDemo T1 = new ThreadDemo("Thread - 1 ", PD);
-    ThreadDemo T2 = new ThreadDemo("Thread - 2 ", PD);
+    ThreadDemo t1 = new ThreadDemo("Thread - 1 ", pd);
+    ThreadDemo t2 = new ThreadDemo("Thread - 2 ", pd);
+    ThreadDemoSynchronized t3 = new ThreadDemoSynchronized("Thread - 3 ", pd);
+    ThreadDemoSynchronized t4 = new ThreadDemoSynchronized("Thread - 4 ", pd);
 
-    T1.start();
-    T2.start();
+    t1.start();
+    t2.start();
 
     // wait for threads to end
     try {
-      T1.join();
-      T2.join();
+      t1.join();
+      t2.join();
     } catch (Exception e) {
       System.out.println("Interrupted");
     }
+    do {
+      try {
+        Thread.sleep(3000);
+      } catch (InterruptedException e1) {
+        e1.printStackTrace();
+      }
+    } while (t1.isAlive() || t2.isAlive());
+
+    t3.start();
+    t4.start();
+
+    // wait for threads to end
+    try {
+      t3.join();
+      t4.join();
+    } catch (Exception e) {
+      System.out.println("Interrupted");
+    }
+    System.out.println("Main exit...");
   }
 }
