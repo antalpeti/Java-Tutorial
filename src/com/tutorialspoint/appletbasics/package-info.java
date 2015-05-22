@@ -95,5 +95,97 @@
  * </p>
  * </li>
  * </ul>
+ *
+ * <h2>The Applet CLASS:</h2>
+ * <p>
+ * Every applet is an extension of the <i>java.applet.Applet class</i>. The base Applet class
+ * provides methods that a derived Applet class may call to obtain information and services from the
+ * browser context.
+ * </p>
+ * <p>
+ * These include methods that do the following:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Get applet parameters
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Get the network location of the HTML file that contains the applet
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Get the network location of the applet class directory
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Print a status message in the browser
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Fetch an image
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Fetch an audio clip
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Play an audio clip
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Resize the applet
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * Additionally, the Applet class provides an interface by which the viewer or browser obtains
+ * information about the applet and controls the applet's execution. The viewer may:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * request information about the author, version and copyright of the applet
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * request a description of the parameters the applet recognizes
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * initialize the applet
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * destroy the applet
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * start the applet's execution
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * stop the applet's execution
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * The Applet class provides default implementations of each of these methods. Those implementations
+ * may be overridden as necessary.
+ * </p>
  */
 package com.tutorialspoint.appletbasics;
