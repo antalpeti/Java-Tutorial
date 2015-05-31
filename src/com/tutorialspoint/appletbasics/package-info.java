@@ -187,5 +187,97 @@
  * The Applet class provides default implementations of each of these methods. Those implementations
  * may be overridden as necessary.
  * </p>
+ *
+ * <h2>Invoking an Applet:</h2>
+ *
+ * <p>
+ * An applet may be invoked by embedding directives in an HTML file and viewing the file through an
+ * applet viewer or Java-enabled browser.
+ * </p>
+ * <p>
+ * The &lt;applet&gt; tag is the basis for embedding an applet in an HTML file.
+ * </p>
+ * <p>
+ * The code attribute of the &lt;applet&gt; tag is required. It specifies the Applet class to run.
+ * Width and height are also required to specify the initial size of the panel in which an applet
+ * runs. The applet directive must be closed with a &lt;/applet&gt; tag.
+ * </p>
+ * <p>
+ * If an applet takes parameters, values may be passed for the parameters by adding &lt;param&gt;
+ * tags between &lt;applet&gt; and &lt;/applet&gt;. The browser ignores text and other tags between
+ * the applet tags.
+ * </p>
+ * <p>
+ * Non-Java-enabled browsers do not process &lt;applet&gt; and &lt;/applet&gt;. Therefore, anything
+ * that appears between the tags, not related to the applet, is visible in non-Java-enabled
+ * browsers.
+ * </p>
+ * <p>
+ * The viewer or browser looks for the compiled Java code at the location of the document. To
+ * specify otherwise, use the codebase attribute of the &lt;applet&gt; tag.
+ * </p>
+ * <p>
+ * If an applet resides in a package other than the default, the holding package must be specified
+ * in the code attribute using the period character (.) to separate package/class components.
+ * </p>
+ *
+ * <h2>Application Conversion to Applets:</h2>
+ * <p>
+ * It is easy to convert a graphical Java application (that is, an application that uses the AWT and
+ * that you can start with the java program launcher) into an applet that you can embed in a web
+ * page.
+ * </p>
+ * <p>
+ * Here are the specific steps for converting an application to an applet.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Make an HTML page with the appropriate tag to load the applet code.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Supply a subclass of the JApplet class. Make this class public. Otherwise, the applet cannot be
+ * loaded.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Eliminate the main method in the application. Do not construct a frame window for the
+ * application. Your application will be displayed inside the browser.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Move any initialization code from the frame window constructor to the init method of the applet.
+ * You don't need to explicitly construct the applet object.the browser instantiates it for you and
+ * calls the init method.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Remove the call to setSize; for applets, sizing is done with the width and height parameters in
+ * the HTML file.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Remove the call to setDefaultCloseOperation. An applet cannot be closed; it terminates when the
+ * browser exits.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If the application calls setTitle, eliminate the call to the method. Applets cannot have title
+ * bars. (You can, of course, title the web page itself, using the HTML title tag.)
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Don't call setVisible(true). The applet is displayed automatically.
+ * </p>
+ * </li>
+ * </ul>
  */
 package com.tutorialspoint.appletbasics;
