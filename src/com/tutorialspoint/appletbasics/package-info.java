@@ -279,5 +279,46 @@
  * </p>
  * </li>
  * </ul>
+ *
+ * <h2>Event Handling:</h2>
+ * <p>
+ * Applets inherit a group of event-handling methods from the Container class. The Container class
+ * defines several methods, such as processKeyEvent and processMouseEvent, for handling particular
+ * types of events, and then one catch-all method called processEvent.
+ * </p>
+ *
+ * <h2>Displaying Images:</h2>
+ * <p>
+ * An applet can display images of the format GIF, JPEG, BMP, and others. To display an image within
+ * the applet, you use the drawImage() method found in the java.awt.Graphics class.
+ * </p>
+ *
+ * <h2>Playing Audio:</h2>
+ * <p>
+ * An applet can play an audio file represented by the AudioClip interface in the java.applet
+ * package. The AudioClip interface has three methods, including:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <b>public void play():</b> Plays the audio clip one time, from the beginning.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <b>public void loop():</b> Causes the audio clip to replay continually.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <b>public void stop():</b> Stops playing the audio clip.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * To obtain an AudioClip object, you must invoke the getAudioClip() method of the Applet class. The
+ * getAudioClip() method returns immediately, whether or not the URL resolves to an actual audio
+ * file. The audio file is not downloaded until an attempt is made to play the audio clip.
+ * </p>
  */
 package com.tutorialspoint.appletbasics;
